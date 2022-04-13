@@ -14,3 +14,10 @@ collections:
   examples:
     output: true
     permalink: /examples/:name
+
+project:
+  version: 1.0
+  power: AAA
+  wireless: WiFi
+  mcu: ESP32
+  status: ongoing
