@@ -1,0 +1,16 @@
+title: Capsicum
+description: 🫑 Retrofit a wired doorbell to add WiFi and make it smart 🔔
+url: "https://hutscape.com/capsicum"
+parent: "https://hutscape.com"
+markdown: kramdown
+permalink: /:title
+youtube: https://www.youtube.com/user/sweska/videos
+github:
+  repository_url: https://github.com/hutscape/capsicum
+  raw_content_url: https://raw.githubusercontent.com/hutscape/capsicum/master
+exclude: ["datasheets", "Gemfile", "Gemfile.lock", "contributing.md", "Makefile", "readme.md", "scripts", "firmware"]
+include: ["_data"]
+collections:
+  examples:
+    output: true
+    permalink: /examples/:name

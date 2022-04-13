@@ -1,0 +1,9 @@
+[submodule "_layouts"]
+	path = _layouts
+	url = https://github.com/hutscape/project-layouts.git
+[submodule "_includes"]
+	path = _includes
+	url = https://github.com/hutscape/project-includes.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/hutscape/project-scripts.git
