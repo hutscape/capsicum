@@ -32,8 +32,8 @@ download_bom: false
           </div>
           <div class="tile is-parent">
             <article class="tile is-child notification">
-              <p class="title">IC & Power</p>
-              <p class="subtitle">Chip <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a> is used. It is powered by 2x AAA batteries.</p>
+              <p class="title">Chip</p>
+              <p class="subtitle">Chip <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a> is used.</p>
               <a href="{{site.url}}/images/prototype/initial-doorbell-chip.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell-chip.jpg" alt="Chip of the original doorbell">
               </a>
@@ -42,6 +42,15 @@ download_bom: false
               </a>
               <a href="{{site.url}}/images/prototype/initial-doorbell-chip-back.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell-chip-back.jpg" alt="Back of the Chip of the original doorbell">
+              </a>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification">
+              <p class="title">Power</p>
+              <p class="subtitle">It is powered by 2 AAA batteries</p>
+              <a href="{{site.url}}/images/prototype/initial-doorbell-power.jpg">
+                <img src="{{site.url}}/images/prototype/initial-doorbell-power.jpg" alt="Power by 2 AAA batteries">
               </a>
             </article>
           </div>
