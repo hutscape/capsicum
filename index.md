@@ -5,13 +5,7 @@ permalink: /
 sequence: 1
 
 manufacturing: false
-downloads:
-  schematic: false
-  layout: false
-  kicad: false
-  gerber: false
-  bom: false
-  case: false
+downloads: false
 features:
   - detail: Send a notification on mobile phone when the door bell rings
   - detail: Turn off door bell based on time of the day E.g. sleeping
