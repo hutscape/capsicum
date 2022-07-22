@@ -5,12 +5,18 @@ permalink: /
 sequence: 1
 
 manufacturing: false
-downloads: false
-download_schematic: false
-download_layout: false
-download_kicad: false
-download_gerber: false
-download_bom: false
+downloads:
+  schematic: false
+  layout: false
+  kicad: false
+  gerber: false
+  bom: false
+  case: false
+features:
+  - detail: Send a notification on mobile phone when the door bell rings
+  - detail: Turn off door bell based on time of the day E.g. sleeping
+  - detail: Turn off door bell sound manually
+  - detail: Turn on a light signal when the door bell rings and the sound is off E.g. in a Zoom call
 ---
 <section class="section is-small">
   <div class="container">
