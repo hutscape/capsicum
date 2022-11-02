@@ -11,13 +11,13 @@ github:
 exclude: ["datasheets", "Gemfile", "Gemfile.lock", "contributing.md", "Makefile", "readme.md", "scripts", "firmware"]
 include: ["_data"]
 collections:
-  examples:
+  code:
     output: true
-    permalink: /examples/:name
+    permalink: /code/:name
 
 project:
   power: AAA
   wireless: WiFi
-  mcu: ESP32
+  mcu: ESP32-S3
   status: ongoing
-  started: April 2022
+  started: Nov 2022
