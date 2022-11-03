@@ -1,7 +1,7 @@
 ---
 layout: code
-title: WiFi Scan
-description: Scan aroung for existing WiFi networks
+title: Connect to a WiFi network
+description: Hello world with Blinky LED
 references:
   - name: Buy the official Espressif devkit
     url: https://www.espressif.com/en/products/devkits/esp32-devkitc/overview
@@ -18,13 +18,16 @@ references:
 difficulty: easy
 features:
   - wifi
-  - scan
+  - connect
+  - ssid
 images:
   prototype: esp32s3-prototype.jpeg
-  console: scan-wifi-console.png
+  console: connect-wifi-console.png
 steps:
   - step: Plug in the board to the computer
   - step: (Option A) Compile and upload with Arduino IDE
   - step: (Option B) Run `make` to compile and upload with `arduino-cli`
   - step: Access the serial monitor
 ---
+
+TODO: Fix error in WiFi connection
