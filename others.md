@@ -33,6 +33,43 @@ similar:
         name: ESP8266
       - type: software stack
         name: Node-Red, WLED
+  - name: DIY Doorbell Circuit for Homes
+    url: https://www.circuits-diy.com/diy-doorbell-circuit-for-homes-electronics-projects/
+    type: maker
+    year: 2022
+    components:
+      - type: melody generator IC
+        name: UM66
+      - type: speaker
+        name: 8ohms speaker
+  - name: Prototype to PCB by Using Autodesk Circuits
+    url: https://www.instructables.com/Prototype-to-PCB-by-Using-Autodesk-Circuits/
+    type: maker
+    year: 2016
+    components:
+      - type: melody generator IC
+        name: NE555N
+      - type: speaker
+        name: 8ohms speaker
+  - name:  DIY Musical Doorbell Circuit using UM66T
+    url: https://circuitdigest.com/electronic-circuits/diy-musical-doorbell-circuit-using-um66-ic
+    type: maker
+    year: 2021
+    components:
+      - type: speaker
+        name: 8ohms speaker
+      - type: melody generator IC
+        name: UM66T
+  - name: Electronic ding dong doorbell
+    url: https://www.pcbway.com/project/shareproject/Electronic_ding_dong_doorbell.html
+    type: maker
+    year: 2020
+    components:
+      - type: speaker
+        name: 8ohms speaker
+      - type: melody generator IC
+        name: IC555
+
 
 references:
   - topic: ESP32
