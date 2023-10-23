@@ -30,6 +30,7 @@ build
 # hardware
 datasheets
 gerbers
+references
 
 # mechanical
 *.FCStd1
