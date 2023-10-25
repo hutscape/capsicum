@@ -120,6 +120,9 @@ references:
       - name: ESP32-C3-MINI-1-N4
         url: https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-MINI-1-N4/13877574
         description: ESP32-C3 module with PCB antenna and 4MB flash
+      - name: ESP32-C3-WROOM-02-N4
+        url: https://www.pcbway.com/components/detail/ESP32C3WROOM02N4/497176/
+        description: ESP32-C3 module with PCB antenna and 4MB flash. Able to be assembled by PCBWay.
       - name: 16340
         url: https://www.amazon.com/LampVPath-CR123A-Battery-Holder-Mounting/dp/B07WVX74KR
         description: rechargeable lithium battery
@@ -129,6 +132,12 @@ references:
       - name: TP4054
         url: https://www.digikey.com/en/products/detail/umw/TP4054/17635214
         description: linear charger for lithium-ion batteries
+      - name: 16340
+        url: https://www.battery.com.sg/product/2v-5000mah-32700-lifepo4-battery
+        description: 3.2V 5000mAh rechargeable LiFePO4 battery
+      - name: LiPo battery
+        url: https://www.battery.com.sg/product/604460-37v-2200mah-li-po-lithium-polymer-rechargeable-battery
+        description: 3.7V 2200mAh Li-po Lithium Polymer rechargeable battery
   - topic: ESP32
     list:
       - name: Espressif product comparison
