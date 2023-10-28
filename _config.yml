@@ -1,10 +1,10 @@
 title: Capsicum
-description: 🫑 Retrofit a wired doorbell to add WiFi and make it smart 🔔
+description: 🫑 Retrofit a wired doorbell to add WiFi and make it connected 🔔
 url: "https://hutscape.com/capsicum"
 parent: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
-youtube: https://www.youtube.com/user/sweska/videos
+youtube: https://www.youtube.com/user/@sayanee/videos
 github:
   repository_url: https://github.com/hutscape/capsicum
   raw_content_url: https://raw.githubusercontent.com/hutscape/capsicum/master
@@ -30,8 +30,8 @@ collections:
     permalink: /code/:name
 
 project:
-  power: AAA
+  power: 16340
   wireless: WiFi
-  mcu: ESP32-S3
+  mcu: ESP32-C3
   status: ongoing
-  started: Nov 2022
+  started: Oct 2023
