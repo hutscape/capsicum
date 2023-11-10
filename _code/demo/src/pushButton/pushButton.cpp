@@ -1,5 +1,5 @@
 #include "pushButton.h"
 
-void initPushButton() {
+void PushButton::init() {
   pinMode(PUSHBUTTON_PIN, INPUT_PULLUP);
 }

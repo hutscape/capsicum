@@ -16,9 +16,9 @@ features:
   - button
   - buzzer
   - bell
-# images:
+images:
 #   prototype: demo-prototype.jpg
-#   console: demo-console.png
+  console: demo-console.png
 ---
 
 This example shows how to use the ESP32-C3 dev board to do the following:
