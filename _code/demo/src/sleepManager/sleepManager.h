@@ -5,15 +5,17 @@
 
 class SleepManager {
 public:
-  SleepManager(int interruptPin);
+  SleepManager(int wakeupInterruptPin, int sleepCheckPin);
 
   void setup();
   void sleep();
+  bool shouldGoToSleep();
   void printWakeupReason();
 
 private:
   int bootCount;
   int interruptPin;
+  int sleepCheckPin;
 
   void blink(int times);
 };

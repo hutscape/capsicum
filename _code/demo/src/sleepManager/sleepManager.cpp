@@ -1,7 +1,7 @@
 #include "sleepManager.h"
 
-SleepManager::SleepManager(int interruptPin)
-  : bootCount(0), interruptPin(interruptPin) {}
+SleepManager::SleepManager(int wakeupInterruptPin, int sleepCheckPin)
+  : bootCount(0), interruptPin(wakeupInterruptPin), sleepCheckPin(sleepCheckPin)  {}
 
 void SleepManager::setup() {
   Serial.begin(115200);
@@ -15,6 +15,10 @@ void SleepManager::sleep() {
   esp_deep_sleep_enable_gpio_wakeup(1 << interruptPin,
     ESP_GPIO_WAKEUP_GPIO_HIGH);
   esp_deep_sleep_start();
+}
+
+bool SleepManager::shouldGoToSleep() {
+  return digitalRead(sleepCheckPin) == LOW;
 }
 
 void SleepManager::printWakeupReason() {
