@@ -1,16 +1,20 @@
 #include "src/sleepManager/sleepManager.h"
 #include "src/bell/bell.h"
 #include "src/ledController/ledController.h"
+#include "src/wifiConnector/wifiConnector.h"
+#include "Secret.h"
 
 #define LED 3  // or use LED_BUILTIN for on-board LED
 #define WAKEUP_INTERRUPT_PIN 4
 
-// if GPIO 2 is HIGH, it will not sleep and stay awake
+// Connect this pin to HIGH if you want to stay awake
+// E.g. for firmware updates
 #define SLEEP_CHECK_PIN 2
 
 Bell bell;
 SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
 LEDController ledController(LED);
+WiFiConnector wifiConnector(ssid, pass);
 
 void setup() {
   sleepManager.setup();
@@ -19,6 +23,12 @@ void setup() {
   ledController.init();
 
   sleepManager.printWakeupReason();
+
+  wifiConnector.connect();
+  if (wifiConnector.isConnected()) {
+    Serial.print("Connected to WiFi SSID ");
+    Serial.println(wifiConnector.getSSID());
+  }
 
   // TODO(sayanee): Check with NTP for the time
   // to know whether to sound the bell
