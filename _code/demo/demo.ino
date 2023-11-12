@@ -3,6 +3,7 @@
 #include "src/sleepManager/sleepManager.h"
 #include "src/wifiConnector/wifiConnector.h"
 #include "src/timeManager/timeManager.h"
+#include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
 #define LED 3
@@ -22,6 +23,7 @@ LEDController ledController(LED);
 SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
 WiFiConnector wifiConnector(ssid, pass);
 TimeManager timeManager(timeZoneOffset, startTime, endTime);
+WebhookClient webhookClient;
 
 void setup() {
   Serial.begin(115200);
@@ -49,6 +51,13 @@ void setup() {
 
   sleepManager.setup();
   ledController.init();
+
+  webhookClient.sendWebhook(
+    certificateAuthority,
+    server,
+    host,
+    endpoint,
+    67);
 }
 
 void loop() {
