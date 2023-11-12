@@ -4,9 +4,6 @@ SleepManager::SleepManager(int wakeupInterruptPin, int sleepCheckPin)
   : bootCount(0), interruptPin(wakeupInterruptPin), sleepCheckPin(sleepCheckPin)  {}
 
 void SleepManager::setup() {
-  Serial.begin(115200);
-  delay(1000);
-
   ++bootCount;
   Serial.println("Boot number: " + String(bootCount));
 }

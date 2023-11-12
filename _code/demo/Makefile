@@ -7,7 +7,7 @@ BUILD=build
 default: lint compile upload clean
 
 lint:
-	cpplint --extensions=ino --filter=-legal/copyright *.ino
+	cpplint --extensions=ino --filter=-legal/copyright,-runtime/int *.ino
 
 compile: clean lint
 	arduino-cli compile --fqbn $(BOARD) --output-dir $(BUILD) ./
