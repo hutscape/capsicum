@@ -7,6 +7,7 @@ void WiFiConnector::connect() {
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, pass);
 
+  // TODO(sayanee): Add a timeout for trying to connect to WiFi
   Serial.print("Connecting to WiFi");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);

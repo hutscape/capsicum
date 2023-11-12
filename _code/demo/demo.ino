@@ -26,6 +26,7 @@ TimeManager timeManager(timeZoneOffset, startTime, endTime);
 WebhookClient webhookClient;
 
 void setup() {
+  // TODO(sayanee): Add a debug print for all print statements
   Serial.begin(115200);
   while (!Serial) { }
 
@@ -34,6 +35,8 @@ void setup() {
     Serial.print("Connected to WiFi SSID ");
     Serial.println(wifiConnector.getSSID());
   }
+  // TODO(sayanee): If WiFi is not connected, then just ring the bell
+  // Else check NTP, ring bell, send webhook
 
   Serial.println("Initializing bell...");
   bell.init();
@@ -49,15 +52,15 @@ void setup() {
     Serial.println("Bell should have rung.");
   }
 
-  sleepManager.setup();
-  ledController.init();
-
   webhookClient.sendWebhook(
     certificateAuthority,
     server,
     host,
     endpoint,
     67);
+
+  sleepManager.setup();
+  ledController.init();
 }
 
 void loop() {
