@@ -1,13 +1,14 @@
 #include "bell.h"
 
-void Bell::init() {
-  pinMode(BELL_PIN, OUTPUT);
-  digitalWrite(BELL_PIN, LOW);
+void Bell::init(int bellPin) {
+  this->bellPin = bellPin;
+  pinMode(this->bellPin, OUTPUT);
+  digitalWrite(this->bellPin, LOW);
 }
 
 void Bell::ring() {
-  digitalWrite(BELL_PIN, HIGH);  // Sound is on
+  digitalWrite(this->bellPin, HIGH);
   delay(250);
-  digitalWrite(BELL_PIN, LOW);  // Sound is off
+  digitalWrite(this->bellPin, LOW);
   delay(250);
 }

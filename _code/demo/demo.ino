@@ -6,6 +6,7 @@
 #include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
+#define BELL_PIN 7
 #define LED 3
 #define WAKEUP_INTERRUPT_PIN 4
 
@@ -39,7 +40,7 @@ void setup() {
   // Else check NTP, ring bell, send webhook
 
   Serial.println("Initializing bell...");
-  bell.init();
+  bell.init(BELL_PIN);
   Serial.println("Bell initialized.");
 
   Serial.println("Initializing time manager...");
