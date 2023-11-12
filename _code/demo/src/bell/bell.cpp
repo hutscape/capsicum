@@ -7,7 +7,7 @@ void Bell::init() {
 
 void Bell::ring() {
   digitalWrite(BELL_PIN, HIGH);  // Sound is on
-  delay(1000);
+  delay(250);
   digitalWrite(BELL_PIN, LOW);  // Sound is off
-  delay(1000);
+  delay(250);
 }
