@@ -67,7 +67,9 @@ void setup() {
     endpoint,
     67);
 
-  sleepManager.setup();
+  sleepManager.increaseBootNumber();
+  DEBUG_DEBUG("Boot Number: %d", sleepManager.getCurrentBootNumber());
+
   ledController.init();
 }
 

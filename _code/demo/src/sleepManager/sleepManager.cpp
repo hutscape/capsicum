@@ -3,9 +3,12 @@
 SleepManager::SleepManager(int wakeupInterruptPin, int sleepCheckPin)
   : bootCount(0), interruptPin(wakeupInterruptPin), sleepCheckPin(sleepCheckPin)  {}
 
-void SleepManager::setup() {
+void SleepManager::increaseBootNumber() {
   ++bootCount;
-  Serial.println("Boot number: " + String(bootCount));
+}
+
+int SleepManager::getCurrentBootNumber() {
+  return bootCount;
 }
 
 void SleepManager::sleep() {
@@ -23,6 +26,7 @@ void SleepManager::printWakeupReason() {
 
   wakeupReason = esp_sleep_get_wakeup_cause();
 
+  #ifdef DEBUG_SLEEP_MANAGER
   switch (wakeupReason) {
     case ESP_SLEEP_WAKEUP_EXT0:
       Serial.println("Wakeup caused by an external signal using RTC_IO");
@@ -43,4 +47,5 @@ void SleepManager::printWakeupReason() {
       Serial.printf("Wakeup was not caused by deep sleep: %d\n", wakeupReason);
       break;
   }
+  #endif
 }
