@@ -2,7 +2,7 @@
 
 WebhookClient::WebhookClient() {}
 
-void WebhookClient::sendWebhook(
+bool WebhookClient::sendWebhook(
   const char* rootCA,
   const char* server,
   const char* host,
@@ -11,9 +11,8 @@ void WebhookClient::sendWebhook(
   client.setCACert(rootCA);
 
   if (!client.connect(server, 443)) {
-    Serial.println("Connection failed!");
+    return false;
   } else {
-    Serial.println("Connected to the server");
     String data = "data1=" + String(dataValue) + "&data2=testing";
     String request = "POST " + String(endpoint) + " HTTP/1.1\r\n";
     request += "Host: " + String(host) + "\r\n";
@@ -21,9 +20,9 @@ void WebhookClient::sendWebhook(
     request += "Content-Length: " + String(data.length()) + "\r\n\r\n";
     request += data;
 
-    Serial.println("Sending request to the server:");
-    Serial.println(request);
-
+    #ifdef DEBUG_WEBHOOK_CLIENT
+      Serial.println(request);
+    #endif
     client.print(request);
 
     // Wait for the response until 5 seconds
@@ -31,11 +30,13 @@ void WebhookClient::sendWebhook(
     while (client.connected() && millis() - startTime < 5000) {
       if (client.available()) {
         char c = client.read();
+        #ifdef DEBUG_WEBHOOK_CLIENT
         Serial.print(c);
+        #endif
       }
     }
 
     client.stop();
-    Serial.println("Request sent to the server");
+    return true;
   }
 }

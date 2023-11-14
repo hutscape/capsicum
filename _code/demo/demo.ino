@@ -60,12 +60,13 @@ void setup() {
     DEBUG_DEBUG("Bell should have rung.");
   }
 
-  webhookClient.sendWebhook(
-    certificateAuthority,
-    server,
-    host,
-    endpoint,
-    67);
+  DEBUG_INFO("Sending webhook to Zapier");
+  if (!webhookClient.sendWebhook(
+    certificateAuthority, server, host, endpoint, 67)) {
+      DEBUG_ERROR("Unsuccessful sending to Zapier");
+  } else {
+    DEBUG_INFO("Successful in sending the webhook to Zapier");
+  }
 
   sleepManager.increaseBootNumber();
   DEBUG_DEBUG("Boot Number: %d", sleepManager.getCurrentBootNumber());
@@ -75,8 +76,10 @@ void setup() {
 
 void loop() {
   if (sleepManager.shouldGoToSleep()) {
+    DEBUG_INFO("Going to sleep");
     sleepManager.sleep();
   }
 
   ledController.blink(1);
+  DEBUG_INFO("Staying awake");
 }

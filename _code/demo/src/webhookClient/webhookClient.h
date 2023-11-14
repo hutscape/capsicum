@@ -3,13 +3,16 @@
 
 #include <WiFiClientSecure.h>
 
+// Uncomment the line below to enable debug prints
+#define DEBUG_WEBHOOK_CLIENT
+
 class WebhookClient {
 private:
   WiFiClientSecure client;
 
 public:
   WebhookClient();
-  void sendWebhook(
+  bool sendWebhook(
     const char* rootCA,
     const char* server,
     const char* host,
