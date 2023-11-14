@@ -15,6 +15,5 @@ void LEDController::blink(int times) {
 
     digitalWrite(ledPin, LOW);
     delay(1000);
-    Serial.println(i + 1);
   }
 }

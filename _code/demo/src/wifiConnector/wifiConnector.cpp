@@ -8,10 +8,14 @@ void WiFiConnector::connect() {
   WiFi.begin(ssid, pass);
 
   // TODO(sayanee): Add a timeout for trying to connect to WiFi
-  Serial.print("Connecting to WiFi");
+  #ifdef DEBUG_WIFI_CONNECTOR
+    Serial.println("Connecting to WiFi");
+  #endif
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print(".");
+    #ifdef DEBUG_WIFI_CONNECTOR
+      Serial.print(".");
+    #endif
   }
 }
 

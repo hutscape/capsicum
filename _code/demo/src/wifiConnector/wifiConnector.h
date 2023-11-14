@@ -3,6 +3,9 @@
 
 #include "WiFi.h"
 
+// Uncomment the line below to enable debug prints
+#define DEBUG_WIFI_CONNECTOR
+
 class WiFiConnector {
 public:
   WiFiConnector(const char* ssid, const char* pass);

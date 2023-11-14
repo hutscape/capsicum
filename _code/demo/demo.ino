@@ -1,3 +1,4 @@
+#include "Arduino_DebugUtils.h"
 #include "src/bell/bell.h"
 #include "src/ledController/ledController.h"
 #include "src/sleepManager/sleepManager.h"
@@ -6,6 +7,10 @@
 #include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
+// Change the debug level according:
+// DBG_NONE, DBG_ERROR, DBG_WARNING,
+// DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
+#define DEBUG DBG_VERBOSE
 #define BELL_PIN 7
 #define LED 3
 #define WAKEUP_INTERRUPT_PIN 4
@@ -27,30 +32,32 @@ TimeManager timeManager(timeZoneOffset, startTime, endTime);
 WebhookClient webhookClient;
 
 void setup() {
-  // TODO(sayanee): Add a debug print for all print statements
   Serial.begin(115200);
   while (!Serial) { }
 
+  Debug.setDebugLevel(DEBUG);
+  Debug.timestampOn();
+
   wifiConnector.connect();
   if (wifiConnector.isConnected()) {
-    Serial.print("Connected to WiFi SSID ");
-    Serial.println(wifiConnector.getSSID());
+    DEBUG_INFO("Connected to WiFi SSID ");
+    DEBUG_INFO(wifiConnector.getSSID());
   }
   // TODO(sayanee): If WiFi is not connected, then just ring the bell
   // Else check NTP, ring bell, send webhook
 
-  Serial.println("Initializing bell...");
+  DEBUG_DEBUG("Initializing bell...");
   bell.init(BELL_PIN);
-  Serial.println("Bell initialized.");
+  DEBUG_DEBUG("Bell initialized.");
 
-  Serial.println("Initializing time manager...");
+  DEBUG_DEBUG("Initializing time manager...");
   timeManager.init();
-  Serial.println("Time manager initialized.");
+  DEBUG_DEBUG("Time manager initialized.");
 
   if (timeManager.isCurrentTimeInRange()) {
-    Serial.println("Ring the bell as its within the time range!");
+    DEBUG_DEBUG("Ring the bell as its within the time range!");
     bell.ring();
-    Serial.println("Bell should have rung.");
+    DEBUG_DEBUG("Bell should have rung.");
   }
 
   webhookClient.sendWebhook(
