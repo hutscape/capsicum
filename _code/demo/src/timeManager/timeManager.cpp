@@ -13,6 +13,10 @@ void TimeManager::init() {
 
 bool TimeManager::isCurrentTimeInRange() {
   timeClient.update();
-  Serial.println(timeClient.getFormattedTime());
+
+  #ifdef DEBUG_TIME_MANAGER
+    Serial.println(timeClient.getFormattedTime());
+  #endif
+
   return (currentHour >= startTime && currentHour < endTime);
 }

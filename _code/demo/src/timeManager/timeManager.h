@@ -4,6 +4,9 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
+// Uncomment the line below to enable debug prints
+#define DEBUG_TIME_MANAGER
+
 class TimeManager {
 private:
   WiFiUDP ntpUDP;
