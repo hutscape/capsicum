@@ -138,6 +138,13 @@ references:
       - name: LiPo battery
         url: https://www.battery.com.sg/product/604460-37v-2200mah-li-po-lithium-polymer-rechargeable-battery
         description: 3.7V 2200mAh Li-po Lithium Polymer rechargeable battery
+      - name: Subwoofer 8ohm Speaker
+        url: https://sg.element14.com/visaton/2901/speaker-miniature-k50-8ohm/dp/4662064?MER=TARG-MER-PLP-RECO-STM71233-0
+        description: 5cm 2W miniature subwoofer 8ohm speaker
+      - name: Subwoofer 8ohm speaker
+        url: https://www.aliexpress.com/item/1005005069433062.html
+        description: 3cm 0.5W miniature subwoofer 8ohm speaker
+
   - topic: ESP32
     list:
       - name: Espressif product comparison
