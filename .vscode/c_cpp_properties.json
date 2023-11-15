@@ -4,7 +4,8 @@
       "name": "Mac",
       "includePath": [
         "${workspaceFolder}/**",
-        "/usr/local/include"
+        "/usr/local/include",
+        "~/Documents/Arduino/libraries/**"
       ],
       "defines": [],
       "macFrameworkPath": [
@@ -14,7 +15,16 @@
       "compilerPath": "/usr/bin/clang",
       "cStandard": "c11",
       "cppStandard": "c++17",
-      "intelliSenseMode": "clang-x64"
+      "intelliSenseMode": "clang-x64",
+      "browse": {
+        "path": [
+          "${workspaceFolder}/**",
+          "/usr/local/include",
+          "~/Documents/Arduino/libraries/**"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
     }
   ],
   "version": 4

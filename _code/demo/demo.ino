@@ -1,3 +1,8 @@
+#define DEBUG DBG_VERBOSE
+// Change the debug level accordingly:
+// DBG_NONE, DBG_ERROR, DBG_WARNING,
+// DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
+
 #include "Arduino_DebugUtils.h"
 #include "src/bell/bell.h"
 #include "src/ledController/ledController.h"
@@ -7,10 +12,6 @@
 #include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
-// Change the debug level according:
-// DBG_NONE, DBG_ERROR, DBG_WARNING,
-// DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
-#define DEBUG DBG_VERBOSE
 #define BELL_PIN 7
 #define LED 3
 #define WAKEUP_INTERRUPT_PIN 4
@@ -40,12 +41,35 @@ void setup() {
 
   wifiConnector.connect();
   if (wifiConnector.isConnected()) {
-    DEBUG_INFO("Connected to WiFi SSID ");
-    DEBUG_INFO(wifiConnector.getSSID());
+    handleConnectedWiFi();
+  } else {
+    ringBell();
   }
-  // TODO(sayanee): If WiFi is not connected, then just ring the bell
-  // Else check NTP, ring bell, send webhook
 
+  ledController.init();
+}
+
+void loop() {
+  ledController.blink(1);
+
+  if (sleepManager.shouldGoToSleep()) {
+    DEBUG_INFO("Going to sleep");
+    sleepManager.sleep();
+  }
+
+  DEBUG_INFO("Staying awake");
+}
+
+void handleConnectedWiFi() {
+  DEBUG_INFO("Connected to WiFi SSID ");
+  DEBUG_INFO(wifiConnector.getSSID());
+
+  initializeBell();
+  ringBellIfNeeded();
+  sendWebhookToZapier();
+}
+
+void initializeBell() {
   DEBUG_DEBUG("Initializing bell...");
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
@@ -53,33 +77,31 @@ void setup() {
   DEBUG_DEBUG("Initializing time manager...");
   timeManager.init();
   DEBUG_DEBUG("Time manager initialized.");
+}
 
+void ringBellIfNeeded() {
   if (timeManager.isCurrentTimeInRange()) {
-    DEBUG_DEBUG("Ring the bell as its within the time range!");
+    DEBUG_DEBUG("Ring the bell as it's within the time range!");
     bell.ring();
     DEBUG_DEBUG("Bell should have rung.");
   }
+}
 
+void sendWebhookToZapier() {
   DEBUG_INFO("Sending webhook to Zapier");
   if (!webhookClient.sendWebhook(
-    certificateAuthority, server, host, endpoint, 67)) {
-      DEBUG_ERROR("Unsuccessful sending to Zapier");
+      certificateAuthority, server, host, endpoint, 67)) {
+    DEBUG_ERROR("Unsuccessful sending to Zapier");
   } else {
     DEBUG_INFO("Successful in sending the webhook to Zapier");
   }
-
-  sleepManager.increaseBootNumber();
-  DEBUG_DEBUG("Boot Number: %d", sleepManager.getCurrentBootNumber());
-
-  ledController.init();
 }
 
-void loop() {
-  if (sleepManager.shouldGoToSleep()) {
-    DEBUG_INFO("Going to sleep");
-    sleepManager.sleep();
-  }
+void ringBell() {
+  DEBUG_DEBUG("Initializing bell...");
+  bell.init(BELL_PIN);
+  DEBUG_DEBUG("Bell initialized.");
 
-  ledController.blink(1);
-  DEBUG_INFO("Staying awake");
+  bell.ring();
+  DEBUG_DEBUG("Bell should have rung.");
 }
