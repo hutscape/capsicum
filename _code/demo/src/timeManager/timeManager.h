@@ -20,6 +20,7 @@ public:
   TimeManager(long timeZoneOffset, int startTime, int endTime);
   void init();
   bool isCurrentTimeInRange();
+  int extractHour(const String &formattedTime);
 };
 
 #endif

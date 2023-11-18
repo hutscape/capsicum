@@ -12,6 +12,11 @@
 #include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
+// GMT+8 (8 hours * 60 minutes * 60 seconds)
+const long timeZoneOffset = 28800;
+const int startTime = 9;  // 9am or 0900h
+const int endTime = 21;  // 9pm or 2100h
+
 #define BELL_PIN 7
 #define LED 3
 #define WAKEUP_INTERRUPT_PIN 4
@@ -19,11 +24,6 @@
 // Connect this pin to HIGH if you want to stay awake
 // E.g. for uploading firmware
 #define SLEEP_CHECK_PIN 2
-
-// GMT+8 (8 hours * 60 minutes * 60 seconds)
-const long timeZoneOffset = 28800;
-const int startTime = 9;  // 9am or 0900h
-const int endTime = 21;  // 9pm or 2100h
 
 Bell bell;
 LEDController ledController(LED);
@@ -66,24 +66,26 @@ void handleConnectedWiFi() {
 
   initializeBell();
   ringBellIfNeeded();
-  sendWebhookToZapier();
+  // sendWebhookToZapier();
 }
 
 void initializeBell() {
   DEBUG_DEBUG("Initializing bell...");
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
-
-  DEBUG_DEBUG("Initializing time manager...");
-  timeManager.init();
-  DEBUG_DEBUG("Time manager initialized.");
 }
 
 void ringBellIfNeeded() {
+  DEBUG_DEBUG("Initializing time manager...");
+  timeManager.init();
+  DEBUG_DEBUG("Time manager initialized.");
+
   if (timeManager.isCurrentTimeInRange()) {
     DEBUG_DEBUG("Ring the bell as it's within the time range!");
     bell.ring();
     DEBUG_DEBUG("Bell should have rung.");
+  } else {
+    DEBUG_DEBUG("Not ringing the bell! It's too late.");
   }
 }
 
