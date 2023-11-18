@@ -66,7 +66,7 @@ void handleConnectedWiFi() {
 
   initializeBell();
   ringBellIfNeeded();
-  // sendWebhookToZapier();
+  sendWebhookToZapier();
 }
 
 void initializeBell() {
