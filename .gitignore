@@ -4,6 +4,7 @@ _autosave*
 .vscode
 *.kicad_pcb-bak
 *.sch-bak
+*.lck
 *.bak
 *-cache.lib
 *-rescue.lib
