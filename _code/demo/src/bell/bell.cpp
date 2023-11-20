@@ -8,7 +8,7 @@ void Bell::init(int bellPin) {
 
 void Bell::ring() {
   digitalWrite(this->bellPin, HIGH);
-  delay(250);
+  delay(5000);
   digitalWrite(this->bellPin, LOW);
   delay(250);
 }
