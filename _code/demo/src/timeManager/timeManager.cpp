@@ -18,6 +18,10 @@ bool TimeManager::isCurrentTimeInRange() {
   #ifdef DEBUG_TIME_MANAGER
     Serial.print("Get Formatted Time: ");
     Serial.println(timeClient.getFormattedTime());
+    Serial.print("Get current hour: ");
+    Serial.println(currentHour);
+    Serial.print("Within time range? ");
+    Serial.println(currentHour >= startTime && currentHour < endTime);
   #endif
 
   return currentHour >= startTime && currentHour < endTime;
@@ -26,8 +30,8 @@ bool TimeManager::isCurrentTimeInRange() {
 int TimeManager::extractHour(const String &formattedTime) {
   int hour = formattedTime.substring(0, 2).toInt(); // Extracts the hour part
   if (hour == 0 || hour == 12) {
-    return 12; // 0 or 12 in 12-hour format represents midnight or noon
+    return hour; // Return 0 or 12 for midnight or noon in 24-hour format
   } else {
-    return hour % 12; // Convert to 12-hour format if necessary
+    return hour; // Return the hour in 24-hour format
   }
 }
