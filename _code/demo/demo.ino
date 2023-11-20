@@ -66,7 +66,10 @@ void handleConnectedWiFi() {
 
   initializeBell();
   ringBellIfNeeded();
-  sendWebhookToZapier();
+
+  // Uncomment below to use for production
+  // or to use below the 100/month Zapier limit
+  // sendWebhookToZapier();
 }
 
 void initializeBell() {
