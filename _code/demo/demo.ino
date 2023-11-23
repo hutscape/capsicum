@@ -64,7 +64,6 @@ void handleConnectedWiFi() {
   DEBUG_INFO("Connected to WiFi SSID ");
   DEBUG_INFO(wifiConnector.getSSID());
 
-  initializeBell();
   ringBellIfNeeded();
 
   // Uncomment below to use for production
@@ -72,13 +71,11 @@ void handleConnectedWiFi() {
   // sendWebhookToZapier();
 }
 
-void initializeBell() {
+void ringBellIfNeeded() {
   DEBUG_DEBUG("Initializing bell...");
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
-}
 
-void ringBellIfNeeded() {
   DEBUG_DEBUG("Initializing time manager...");
   timeManager.init();
   DEBUG_DEBUG("Time manager initialized.");
@@ -88,7 +85,7 @@ void ringBellIfNeeded() {
     bell.ring();
     DEBUG_DEBUG("Bell should have rung.");
   } else {
-    DEBUG_DEBUG("Not ringing the bell! It's too late.");
+    DEBUG_DEBUG("Not ringing the bell! The time is not right.");
   }
 }
 
