@@ -17,7 +17,7 @@ features:
   - buzzer
   - bell
 images:
-  prototype: demo-prototype.jpeg
+  prototype: demo-prototype.jpg
   console: demo-console.png
   schematic: demo-schematic.png
 ---

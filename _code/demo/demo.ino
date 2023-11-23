@@ -85,7 +85,7 @@ void ringBellIfNeeded() {
     bell.ring();
     DEBUG_DEBUG("Bell should have rung.");
   } else {
-    DEBUG_DEBUG("Not ringing the bell! The time is not right.");
+  DEBUG_DEBUG("Not ringing the bell! The time is not right.");
   }
 }
 

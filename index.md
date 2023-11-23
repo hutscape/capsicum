@@ -25,8 +25,8 @@ features:
               <a href="{{site.url}}/images/prototype/initial-doorbell.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
-              <a href="{{site.url}}/images/prototype/front.jpg">
-                <img src="{{site.url}}/images/prototype/front.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
+              <a href="{{site.url}}/images/prototype/prototype-3.jpg">
+                <img src="{{site.url}}/images/prototype/prototype-3.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
             </article>
           </div>
