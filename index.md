@@ -7,10 +7,10 @@ sequence: 1
 manufacturing: false
 downloads: false
 features:
-  - detail: Send a notification on mobile phone when the door bell rings
-  - detail: Turn off door bell based on time of the day E.g. sleeping
-  - detail: Turn off door bell sound manually
-  - detail: Turn on a light signal when the door bell rings and the sound is off E.g. in a Zoom call
+  - detail: Turn off door bell audio based on time of the day E.g. sleeping
+  - detail: Connect to WiFi and send a webhook to Zapier for future integrations
+  - detail: (Integration) Turn on a light signal when the door bell rings and the sound is off E.g. in a Zoom call
+  - detail: (Integration) Send a mobile notification
 ---
 <section class="section is-small">
   <div class="container">
@@ -28,12 +28,17 @@ features:
               <a href="{{site.url}}/images/prototype/prototype-3.jpg">
                 <img src="{{site.url}}/images/prototype/prototype-3.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
+              <p class="title">Battery</p>
+              <p class="subtitle">It is powered by 2 AAA batteries</p>
+              <a href="{{site.url}}/images/prototype/initial-doorbell-power.jpg">
+                <img src="{{site.url}}/images/prototype/initial-doorbell-power.jpg" alt="Power by 2 AAA batteries">
+              </a>
             </article>
           </div>
           <div class="tile is-parent">
             <article class="tile is-child notification">
               <p class="title">Chip</p>
-              <p class="subtitle">Chip <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a> is used.</p>
+              <p class="subtitle">Chip <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a> is used. It rings "Ding Dong"  2 times. It is a Music chip with a built-in transistor positive trigger.</p>
               <a href="{{site.url}}/images/prototype/initial-doorbell-chip.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell-chip.jpg" alt="Chip of the original doorbell">
               </a>
@@ -47,10 +52,17 @@ features:
           </div>
           <div class="tile is-parent">
             <article class="tile is-child notification">
-              <p class="title">Power</p>
-              <p class="subtitle">It is powered by 2 AAA batteries</p>
-              <a href="{{site.url}}/images/prototype/initial-doorbell-power.jpg">
-                <img src="{{site.url}}/images/prototype/initial-doorbell-power.jpg" alt="Power by 2 AAA batteries">
+              <p class="title">Prototype</p>
+              <p class="subtitle">Wire up the TQ33E-11 chip with breadboard.</p>
+              <a href="{{site.url}}/images/pcb/schematic.png">
+                <img src="{{site.url}}/images/pcb/schematic.png" alt="Schematic of the breadboard">
+              </a>
+              <a href="{{site.url}}/images/prototype/front.jpg">
+                <img src="{{site.url}}/images/prototype/front.jpg" alt="Prototype">
+              </a>
+              <p class="subtitle">Upload the <a href="/code/demo#code">firmware</a> and view the serial monitor.</p>
+              <a href="{{site.url}}/images/code/demo-console.png">
+                <img src="{{site.url}}/images/code/demo-console.png" alt="Serial monitor">
               </a>
             </article>
           </div>
