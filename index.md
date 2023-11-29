@@ -5,7 +5,13 @@ permalink: /
 sequence: 1
 
 manufacturing: false
-downloads: false
+downloads:
+  schematic: true
+  layout: false
+  kicad: false
+  gerber: false
+  bom: false
+  case: false
 features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
   - detail: Connect to WiFi and send a webhook to Zapier for future integrations
