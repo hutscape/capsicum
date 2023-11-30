@@ -49,6 +49,24 @@ similar:
         name: 16340
       - type: connector
         name: USB-C
+  - name: Espressif ESP32-C3 DevKit M-1
+    url: https://dl.espressif.com/dl/schematics/SCH_ESP32-C3-DEVKITM-1_V1_20200915A.pdf
+    type: maker
+    year: 2021
+    components:
+      - type: module
+        name: ESP32-C3
+      - type: connector
+        name: micro USB
+  - name: MakerMoeKoe picoclick C3
+    url: https://github.com/makermoekoe/Picoclick-C3/blob/main/pcb/Picoclick_C3/picoclick_c3_v1.1.pdf
+    type: maker
+    year: 2021
+    components:
+      - type: module
+        name: ESP32-C3
+      - type: connector
+        name: USB-C
   - name: DIY Wireless Smart Doorbell by The Hook Up
     url: https://github.com/thehookup/Wireless_MQTT_Doorbell
     type: maker
