@@ -4,4 +4,5 @@
   (lib (name "Molex USB-C")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/molex_usb_c_1054500101.kicad_sym")(options "")(descr ""))
   (lib (name "bell_tq33e-1")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/bell_tq33e-1.kicad_sym")(options "")(descr ""))
   (lib (name "GCT_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/GCT_USB4510-03-1-A_REVA.kicad_sym")(options "")(descr ""))
+  (lib (name "Push button")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/ESwitch_TL3305AF160QG.kicad_sym")(options "")(descr ""))
 )
