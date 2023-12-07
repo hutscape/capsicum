@@ -1,4 +1,4 @@
-22360212391380157
+22363616124039559
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -81927,6 +81927,13 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
+Push button
+SW_TL3305AF160QG
+
+
+0
+4
+4
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -91510,6 +91517,13 @@ igbt diode module
 0
 25
 25
+USB_C_2
+GCT_USB4500-03-0-A_REVA
+
+
+0
+16
+16
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
