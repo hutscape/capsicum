@@ -1,8 +1,7 @@
 (fp_lib_table
   (version 7)
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Espressif.pretty")(options "")(descr ""))
-  (lib (name "Molex USB-C")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/molex_usb_c_1054500101.pretty")(options "")(descr ""))
-  (lib (name "GCT_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/GCT_USB4510-03-1-A_REVA.pretty")(options "")(descr ""))
   (lib (name "Push button")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/ESwitch_TL3305AF160QG.pretty")(options "")(descr ""))
   (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Phoenix_screw_terminal.pretty")(options "")(descr ""))
+  (lib (name "Molex_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Molex_USB_C.pretty")(options "")(descr ""))
 )
