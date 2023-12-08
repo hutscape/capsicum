@@ -4,4 +4,5 @@
   (lib (name "Push button")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/ESwitch_TL3305AF160QG.pretty")(options "")(descr ""))
   (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Phoenix_screw_terminal.pretty")(options "")(descr ""))
   (lib (name "Molex_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Molex_USB_C.pretty")(options "")(descr ""))
+  (lib (name "P-channel MOSFET")(type "KiCad")(uri "/Users/sayanee/Desktop/NTS2101PT1/KiCADv6/footprints.pretty")(options "")(descr ""))
 )
