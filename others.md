@@ -168,9 +168,18 @@ references:
       - name: Espressif product comparison
         url: https://products.espressif.com/#/product-comparison
 
+  - topic: Low Power battery measurement circuit
+    list:
+      - name: Battery Voltage Monitoring
+        url: https://electronics.stackexchange.com/questions/424627/battery-voltage-monitoring
+      - name: Zero-power battery measurement
+        url: https://jeelabs.org/2013/05/17/zero-powe-battery-measurement/index.html
+      - name: Low Power battery measurement switch?
+        url: https://forum.arduino.cc/t/low-power-battery-measurement-switch/1171203
+
 # Schedule
-design_start: '2022-04-01'
+design_start: '2023-10-01'
 progress:
-  - month: April 2022
-    details: Learn about the current doorbell. Wait for ESP32-S3 and ESP32-C3 dev boards to arrive.
+  - month: December 2023
+    details: Completing the schematics with footprints, MPN and availability of assembly parts.
 ---
