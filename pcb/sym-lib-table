@@ -5,5 +5,4 @@
   (lib (name "Push button")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/ESwitch_TL3305AF160QG.kicad_sym")(options "")(descr ""))
   (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Phoenix_screw_terminal_th_1935161.kicad_sym")(options "")(descr ""))
   (lib (name "Molex_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Molex_USB_C_2137160001.kicad_sym")(options "")(descr ""))
-  (lib (name "P-channel MOSFET")(type "KiCad")(uri "/Users/sayanee/Desktop/NTS2101PT1/KiCADv6/2023-12-08_09-03-52.kicad_sym")(options "")(descr ""))
 )
