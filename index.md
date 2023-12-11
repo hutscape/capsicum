@@ -27,7 +27,7 @@ features:
           <div class="tile is-parent">
             <article class="tile is-child notification">
               <p class="title">Teardown</p>
-              <p class="subtitle">Look into the internals of an existing <a href="https://www.aliexpress.com/item/1005001632340110.html">wired battery-powered doorbell from FUERS</a> bought on AliExpress, priced at USD $4.00.</p>
+              <p class="subtitle">Look into the internals of an existing <a href="https://s.click.aliexpress.com/e/_Dm6bTXf">wired battery-powered doorbell from FUERS</a> bought on AliExpress, priced below USD $4.00.</p>
               <a href="{{site.url}}/images/prototype/initial-doorbell.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
