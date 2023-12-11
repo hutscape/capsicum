@@ -13,6 +13,7 @@ _autosave*
 *.hex
 *.pyc
 *.gch
+\#*
 
 # jekyll
 ideas
