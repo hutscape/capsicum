@@ -2843,7 +2843,7 @@
     (property "Value" "16320 battery" (at 95.25 43.18 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 101.6 36.576 90)
+    (property "Footprint" "Battery Holder CR123A:CR123_holder" (at 101.6 36.576 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 101.6 36.576 90)

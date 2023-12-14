@@ -1,4 +1,4 @@
-22363616124039559
+22363619451155812
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -339,6 +339,13 @@ Battery
 Battery_Panasonic_CR3032-VCN_Vertical_CircularHoles
 Panasonic CR-3032/VCN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D508.PDF
 battery CR-3032 coin cell vertical
+0
+2
+2
+Battery Holder CR123A
+CR123_holder
+CR123 battery holder
+Battery holder, CR123
 0
 2
 2
@@ -55901,13 +55908,6 @@ Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560
 0
 2
 2
-GCT_USB_C
-GCT_USB4510-03-1-A_REVA
-
-
-0
-16
-16
 Heatsink
 Heatsink_35x26mm_1xFixation3mm_Fischer-SK486-35
 Heatsink, 35mm x 26mm, 1x Fixation 3mm, Fischer SK486-35
@@ -62649,13 +62649,13 @@ ESP8266 WiFi microcontroller
 0
 16
 16
-Molex USB-C
-molex_usb_c_1054500101
+Molex_USB_C
+Molex_USB_C_2137160001
 
 
 0
-28
-28
+20
+20
 Motors
 Vybronics_VZ30C1T8219732L
 Vibration motor, 2.3-3.2V, 14000rpm, 0.7G, https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ30C1T8219732L-datasheet.pdf
@@ -85070,6 +85070,13 @@ rotary encoder
 0
 7
 6
+Screw Terminal
+phoenix_screw_terminal_th_1935161
+
+
+0
+2
+2
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://www.aosong.com/en/products-22.html
@@ -91517,13 +91524,6 @@ igbt diode module
 0
 25
 25
-USB_C_2
-GCT_USB4500-03-0-A_REVA
-
-
-0
-16
-16
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
