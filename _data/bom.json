@@ -1,0 +1,12 @@
+{
+  "bom-uniq": 29,
+  "bom-total": 68,
+  "bom-total-populate": 63,
+  "bom-cost": 15.97,
+  "currency": "USD",
+  "vendor-names": [
+    "AliExpress",
+    "PCBWay"
+  ],
+  "vendors": 2
+}

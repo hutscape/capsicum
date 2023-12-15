@@ -8,9 +8,9 @@ manufacturing: false
 downloads:
   schematic: true
   layout: false
-  kicad: false
+  kicad: true
   gerber: false
-  bom: false
+  bom: true
   case: false
 features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
