@@ -3865,7 +3865,7 @@
     (property "Value" "TQ33E-1" (at 207.01 110.49 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 207.01 110.49 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" (at 207.01 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.yoycart.com/Product/550682313846/" (at 207.01 110.49 0)
