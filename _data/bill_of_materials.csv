@@ -1,4 +1,4 @@
-Designator,Value,Qty,Package,Category,MANUFACTURER,MPN,Datasheet,Vendor,Link,Unit Price (USD),Total Price (USD),Description,DNP
+Designator,Value,Qty,Package,Category,MANUFACTURER,MPN,Datasheet,Vendor,Link,Unit,Total,Description,DNP
 BT1,16320 battery,1,SMD,Connector,EAEONXE,,,,,2.220,2.2200,Battery Holder CR123A:CR123_holder,
 "C1-C5, C11",10uF,6,603,Electronics,YAGEO,CC0603KRX5R6BB106,https://www.yageo.com/upload/website/yageo_High%20Capacitance%20MLCCs_2016_19050911_141.pdf,PCBWay,https://www.pcbway.com/components/detail/CC0603KRX5R6BB106/1422744/,0.028,0.1704,Capacitor_SMD:C_0603_1608Metric,
 C6-C8,1uF,3,603,Electronics,Kyocera,06033D105MAT2A,https://datasheets.kyocera-avx.com/cx5r.pdf,PCBWay,https://www.pcbway.com/components/detail/06033D105MAT2A/217792/,0.175,0.5244,Capacitor_SMD:C_0603_1608Metric,
@@ -10,8 +10,8 @@ D3,Orange,1,603,Electronics,Harvatek Corporation,B1911UD--20D001014U1930,https:/
 "D6, D7",Red,2,603,Electronics,Würth Elektronik,150060RS75000,https://www.we-online.com/components/products/datasheet/150060RS75000.pdf,PCBWay,https://www.pcbway.com/components/detail/150060RS75000/291675/,0.179,0.3580,Resistor_SMD:R_0603_1608Metric,
 J2,Screw terminal,1,TH,Connector,Phoenix,1935161,https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf,PCBWay,https://www.pcbway.com/components/detail/1935161/483076/,0.284,0.2835,Screw Terminal:phoenix_screw_terminal_th_1935161,
 J3,USB-C 16+8 USB 2.0,1,TH,Connector,Molex,2137160001,https://www.molex.com/en-us/products/part-detail/2137160001,PCBWay,https://www.pcbway.com/components/detail/2137160001/1084349/,0.965,0.9651,Molex_USB_C:Molex_USB_C_2137160001,
-JP1-JP3,SolderJumper_2_Open,3,,Electronics,,,,,,0.000,0.0000,Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,"JP1, JP2, JP3"
-JP4-JP7,SolderJumper_2_Bridged,4,,Electronics,,,,,,0.000,0.0000,Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm,"JP4, JP5, JP6, JP7"
+JP1-JP3,SolderJumper_2_Open,3,,Electronics,,,,,,0.000,0.0000,Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,"JP1- JP3"
+JP4-JP7,SolderJumper_2_Bridged,4,,Electronics,,,,,,0.000,0.0000,Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm,"JP4-JP7"
 Q1,NS2101P,1,SC-70-3 (SOT323),Electronics,OnSemi,NTS2101PT1G,http://www.farnell.com/datasheets/1835997.pdf,PCBWay,https://www.pcbway.com/components/detail/NTS2101PT1G/343596/,0.471,0.4712,Package_TO_SOT_SMD:SOT-323_SC-70,
 Q2,BC817,1,SOT-23-3,Electronics,OnSemi,BC817-16LT3G,https://www.onsemi.com/pub/Collateral/BC818-D.pdf,PCBWay,https://www.pcbway.com/components/detail/BC81716LT3G/284301/,0.159,0.1593,Package_TO_SOT_SMD:SOT-23-3,
 "R1, R7-R9, R13",10k,5,603,Electronics,YAGEO,RC0603FR-0710KL,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,PCBWay,https://www.pcbway.com/components/detail/RC0603FR0710KL/462747/,0.004,0.0190,Resistor_SMD:R_0603_1608Metric,
@@ -22,7 +22,7 @@ R16,1M,1,603,Electronics,YAGEO,RC0603FR-071ML,https://www.yageo.com/upload/media
 "R17, R18",33R,2,603,Electronics,YAGEO,RC0603JR-0733RL,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,PCBWay,https://www.pcbway.com/components/detail/RC0603JR0733RL/285734/,0.021,0.0416,Resistor_SMD:R_0603_1608Metric,
 "S1, S2",Push button,2,,Connector,E-Switch,TL3305AF160QG,https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/213/TL3305.pdf,,https://www.pcbway.com/components/detail/TL3305AF160QG/477561/,0.170,0.3402,Push button:SW_TL3305AF160QG,
 "SW1, SW3",SW_SPDT,2,SMD,Electronics,NIDEC COPAL ELECTRONICS,CUS-12TB,https://www.nidec-components.com/e/catalog/switch/cus.pdf,PCBWay,https://www.pcbway.com/components/detail/CUS12TB/705754/,0.803,1.6066,Button_Switch_SMD:SW_SPDT_PCM12,
-TP1-TP14,TestPoint_Probe,14,,Electronics,,,~,,,0.000,0.0000,TestPoint:TestPoint_Pad_1.5x1.5mm,"TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14"
+TP1-TP14,TestPoint_Probe,14,,Electronics,,,~,,,0.000,0.0000,TestPoint:TestPoint_Pad_1.5x1.5mm,"TP1-TP14"
 U1,ESP32-C3-WROOM-02,1,SMD,Electronics,Espressif,ESP32-C3-WROOM-02,https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf,PCBWay,https://www.pcbway.com/components/detail/ESP32C3WROOM02N4/497176/,2.633,2.6334,Espressif:ESP32-C3-WROOM-02,
 U2,TQ33E-1,1,TH,Electronics,FUERS,TQ33E-1,https://www.yoycart.com/Product/550682313846/,AliExpress,https://s.click.aliexpress.com/e/_Dm6bTXf,3.220,3.2200,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal,
 U3,AP2112K,1,SOT-23-5 or SOT-753 or SOT-25,Electronics,Diodes Incorporated,AP2112K-3.3TRG1,https://www.diodes.com/assets/Datasheets/AP2112.pdf,,https://www.pcbway.com/components/detail/AP2112K33TRG1/1123103/,0.199,0.1985,Package_TO_SOT_SMD:SOT-23-5,
