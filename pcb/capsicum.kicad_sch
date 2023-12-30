@@ -2811,7 +2811,7 @@
     (property "Unit Price (USD)" "0" (at 25.4 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bdb6db3c-abdc-4366-aa09-8e650139ca4b))
+    (pin "1" (uuid c735f4e5-a014-47be-a055-01dcaa1d0cfd))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -2845,7 +2845,7 @@
     (property "Unit Price (USD)" "0" (at 25.4 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d2779a3a-3596-4b7b-befd-df47f08fb41a))
+    (pin "1" (uuid 487734a9-0de8-47f7-a322-0dc35c8283c3))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -2914,7 +2914,7 @@
     (property "Datasheet" "" (at 110.49 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7d4b3f9f-ecf8-4cb0-a947-1ff76d7f4dca))
+    (pin "1" (uuid 3b844f3a-f6bf-41bf-b546-40b20d97dee0))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -3252,8 +3252,8 @@
     (property "Vendor" "PCBWay" (at 110.49 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c39b214e-f4cb-4d53-aecb-3474579cbee4))
-    (pin "2" (uuid 558a61d0-d950-47b8-bade-fbeeadae2aa1))
+    (pin "1" (uuid 3d26f421-2e98-49bb-af9c-c98d7b4eca4c))
+    (pin "2" (uuid 8c6170e2-f49e-4b22-ac7a-7ff41d1d04e4))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -3521,7 +3521,7 @@
     (property "Unit Price (USD)" "0" (at 91.44 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bc229ac0-79a1-4bdc-89ee-84d921b88632))
+    (pin "1" (uuid 39851654-4846-474a-bdb2-fa309dd27c41))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -3592,8 +3592,8 @@
     (property "Vendor" "PCBWay" (at 102.87 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid baf51e39-b6e7-47c1-9678-b67b8890cdf0))
-    (pin "2" (uuid f78dc539-811c-40dd-a9aa-4092a8c65a51))
+    (pin "1" (uuid 7e3ce09f-80a7-4e58-8b51-6be6c0c8aedc))
+    (pin "2" (uuid cbc288d0-f410-4703-b9bd-7e6260b11a00))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -3717,7 +3717,7 @@
     (property "Unit Price (USD)" "0" (at 91.44 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ad0d0ea9-b5a1-4ddb-bcaf-790fa595ee3e))
+    (pin "1" (uuid 6985a135-a837-40d0-b201-dd99a32b7524))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -4045,7 +4045,7 @@
     (property "Datasheet" "~" (at 54.61 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4bdf6e37-dc97-4572-86c6-41c094b16ca8))
+    (pin "1" (uuid 5dfc2950-1cd8-4b63-8e57-1e0d1a2e5996))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -5099,25 +5099,25 @@
     (property "Unit Price (USD)" "2.6334" (at 58.42 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f4246387-3a6a-4698-bb80-b66d9aed492c))
-    (pin "10" (uuid fcb9f873-55d1-4f8a-9bb0-551244c0adc4))
-    (pin "11" (uuid c71ee317-3e74-4661-8c9c-08261042c930))
-    (pin "12" (uuid 4fb30705-97f4-44e4-95cd-fe2030594ffc))
-    (pin "13" (uuid dd61b656-0b5f-40d2-b6a1-c930d1485a91))
-    (pin "14" (uuid fc0e5d28-1ef4-4aec-8587-c467d6e391c6))
-    (pin "15" (uuid a2bf1605-4f70-4202-b0c4-7c99ab8686b9))
-    (pin "16" (uuid c16a5675-5d9f-477b-b643-254b4e29a904))
-    (pin "17" (uuid dc0f1e1c-831c-4ca9-bb9e-b4aea8337977))
-    (pin "18" (uuid 50bdfd70-3f8b-400f-8e8b-2c87198a948b))
-    (pin "19" (uuid 58d83d2e-e18d-41fb-ae3a-6c70a0a07e08))
-    (pin "2" (uuid bde78c2e-e7f3-4727-8710-0e36553bad02))
-    (pin "3" (uuid 85f2ff79-1789-4d87-8131-ae9c1014e158))
-    (pin "4" (uuid b8159b6c-94d8-4e6f-9618-3bd7bfb066fb))
-    (pin "5" (uuid 244df6ba-aa07-400a-ab14-b04de2889588))
-    (pin "6" (uuid 3b0f51ab-3a66-42e4-93e8-88aa0436322a))
-    (pin "7" (uuid 004a6804-2922-4bbc-a35d-222a75be7d5b))
-    (pin "8" (uuid 76ed5a35-814e-448b-b416-28a803de3ab6))
-    (pin "9" (uuid 2a2f7608-d7cd-45dd-9d63-6584c89980dd))
+    (pin "1" (uuid ae9e7bd1-22e1-48e4-95d3-76a0f1bc149e))
+    (pin "10" (uuid 0c6a2418-173d-423d-9aa8-41114eb1fca0))
+    (pin "11" (uuid d1f11b0c-3a0b-4b76-bf17-6ff3f086fa11))
+    (pin "12" (uuid 3df3c9c5-8756-4adc-a0f0-8b76ac35be1a))
+    (pin "13" (uuid 83f56aba-9790-4ef9-98ed-df8d2f7b08ad))
+    (pin "14" (uuid b64848c1-73b4-4878-9420-bd1152f11983))
+    (pin "15" (uuid a0932902-d539-4916-bfc3-16da66af36b6))
+    (pin "16" (uuid f6dc5b00-17a1-48a0-b6fe-7e38cd345226))
+    (pin "17" (uuid 9abc086a-f415-49c8-82a5-c48c803149ff))
+    (pin "18" (uuid 0435f8f7-c7ac-4b3f-91e2-f4cc6a55d153))
+    (pin "19" (uuid cfedda56-a54d-422d-bc17-d5aa78f9c81e))
+    (pin "2" (uuid ab6f35cd-95fd-46e3-b251-df68f8489fb6))
+    (pin "3" (uuid 1c688980-79d1-4b38-81ec-b88e32e567a2))
+    (pin "4" (uuid 4818d9e5-b464-4e58-b664-a8464bbaf822))
+    (pin "5" (uuid e71e064f-b01c-4be4-9ae1-b8e445541968))
+    (pin "6" (uuid 14a3fd04-6e61-43bc-9aa2-3279f3369446))
+    (pin "7" (uuid aefde348-d4ad-4f44-9d19-9e7f09827fc9))
+    (pin "8" (uuid 5bc8cfd5-b5ce-4eb1-8844-1a35e31a91ba))
+    (pin "9" (uuid 169f4ae6-aaea-4fe2-93ad-358a80b8656c))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -5192,7 +5192,7 @@
     (property "Datasheet" "" (at 58.42 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 930814fd-9bf8-4b0a-8b43-d22c725cdd24))
+    (pin "1" (uuid 4420d1ba-cc11-451f-b59e-f21720a09125))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -5433,7 +5433,7 @@
     (property "Datasheet" "" (at 102.87 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7690e217-00fb-4c05-91b9-936a8a28c1d7))
+    (pin "1" (uuid cfb01eec-4977-4ccc-a7f7-3ff6025b9fc5))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -5753,7 +5753,7 @@
     (property "Datasheet" "" (at 58.42 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c14c042b-471f-41f2-82ee-db7c829f3521))
+    (pin "1" (uuid 3f5f3167-5486-41ac-ac4d-867fe064a3ba))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -6273,7 +6273,7 @@
     (property "Unit Price (USD)" "0" (at 91.44 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e69fc80a-f9f4-4b58-9073-cb11e458fe3e))
+    (pin "1" (uuid 8af50c5a-e9c7-4d2e-996e-9af0ab62c002))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
@@ -6458,7 +6458,7 @@
     (property "Datasheet" "~" (at 55.88 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7b8f7598-358c-469c-9a17-b31fa1dbe0ef))
+    (pin "1" (uuid 3a855a8d-ab88-4c37-9822-4f3202339256))
     (instances
       (project "capsicum"
         (path "/b2b89cea-f415-45cb-9116-7d102948da73"
