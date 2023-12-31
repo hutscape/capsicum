@@ -5,4 +5,5 @@
   (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Phoenix_screw_terminal.pretty")(options "")(descr ""))
   (lib (name "Molex_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Molex_USB_C.pretty")(options "")(descr ""))
   (lib (name "Battery Holder CR123A")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/CR123A_battery_holder.pretty")(options "")(descr ""))
+  (lib (name "Keystone_TP")(type "KiCad")(uri "${KIPRJMOD}/library/footprints/Keystone_test_point_5015.pretty")(options "")(descr ""))
 )
