@@ -17,6 +17,17 @@ similar:
         name: AP2112K-3.3
       - type: connector
         name: USB-C
+  - name: Seeed Studio ESP32-C3 XIAO board
+    url: https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf
+    type: maker
+    year: 2022
+    components:
+      - type: module
+        name: ESP32-C3FN4 (no on-board antenna)
+      - type: LDO
+        name: XC6204B33
+      - type: connector
+        name: USB-C
   - name: Olimex ESP32-C3-DevKit-Lipo
     url: https://www.olimex.com/Products/IoT/ESP32-C3/ESP32-C3-DevKit-Lipo/open-source-hardware
     type: maker
