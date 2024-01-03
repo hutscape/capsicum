@@ -144,7 +144,7 @@ similar:
 
 
 references:
-  - topic: Parts to consider
+  - topic: Components to consider
     list:
       - name: ESP32-C3-MINI-1-N4
         url: https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-MINI-1-N4/13877574
@@ -152,7 +152,7 @@ references:
       - name: ESP32-C3-WROOM-02-N4
         url: https://www.pcbway.com/components/detail/ESP32C3WROOM02N4/497176/
         description: ESP32-C3 module with PCB antenna and 4MB flash. Able to be assembled by PCBWay.
-      - name: 16340
+      - name: 16340 / CR123A battery holder
         url: https://www.amazon.com/LampVPath-CR123A-Battery-Holder-Mounting/dp/B07WVX74KR
         description: rechargeable lithium battery
       - name: ME6211
@@ -173,6 +173,15 @@ references:
       - name: Subwoofer 8ohm speaker
         url: https://www.aliexpress.com/item/1005005069433062.html
         description: 3cm 0.5W miniature subwoofer 8ohm speaker
+
+  - topic: Snap fit 3D printed enclosure
+    list:
+      - name: Adafruit Feather Scorpio Snap Fit Case
+        url: https://learn.adafruit.com/feather-scorpio-snap-fit-case/overview
+      - name: No-screw PCB placement in a snap fit 3D printed case
+        url: https://www.youtube.com/watch?v=m_-d8xcSDQs
+      - name: Simple SNAP FIT ENCLOSURE Design
+        url: https://www.youtube.com/watch?v=EPpr1nilC14
 
   - topic: ESP32
     list:
