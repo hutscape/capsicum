@@ -1,7 +1,7 @@
 {
   "bom-total": 74,
-  "bom-total-populate": 56,
-  "bom-uniq": 30,
+  "bom-total-populate": 69,
+  "bom-uniq": 31,
 
   "vendors": 2,
   "vendor-names": [
@@ -10,5 +10,5 @@
   ],
 
   "currency": "USD",
-  "bom-cost": 17.44
+  "bom-cost": 17.35
 }

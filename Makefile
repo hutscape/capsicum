@@ -37,3 +37,6 @@ install:
 	echo "Adding Gemfile and installing ruby gems..."
 	cat scripts/Gemfile > Gemfile
 	bundle install
+
+update:
+	git submodule update --remote

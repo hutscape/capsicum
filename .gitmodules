@@ -1,12 +1,12 @@
 [submodule "_layouts"]
 	path = _layouts
-	url = https://github.com/hutscape/project-layouts.git
+	url = git@github.com:hutscape/project-layouts.git
 [submodule "_includes"]
 	path = _includes
-	url = https://github.com/hutscape/project-includes.git
+	url = git@github.com:hutscape/project-includes.git
 [submodule "scripts"]
 	path = scripts
-	url = https://github.com/hutscape/project-scripts.git
+	url = git@github.com:hutscape/project-scripts.git
 [submodule "pcb/library"]
 	path = pcb/library
 	url = git@github.com:hutscape/kicad-library.git

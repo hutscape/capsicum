@@ -6,5 +6,4 @@
   (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Phoenix_screw_terminal_th_1935161.kicad_sym")(options "")(descr ""))
   (lib (name "Molex_USB_C")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Molex_USB_C_2137160001.kicad_sym")(options "")(descr ""))
   (lib (name "Keystone_TP")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Keystone_test_point_5015.kicad_sym")(options "")(descr ""))
-  (lib (name "Slide switch")(type "KiCad")(uri "/Users/sayanee/Desktop/JS102011JCQN/JS102011JCQN.kicad_sym")(options "")(descr ""))
 )

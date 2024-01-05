@@ -7,7 +7,7 @@
   (paper "A4")
   (title_block
     (title "Capsicum")
-    (date "2024-01-03")
+    (date "2024-01-05")
     (comment 1 "Authored by: Sayanee Basu")
     (comment 2 "Project website: https://hutscape.com/capsicum")
     (comment 3 "License: CC-BY-SA 4.0 or TAPR")
@@ -644,7 +644,7 @@
       (net 47 "/SLEEP_CHECK_SWITCH") (pinfunction "B") (pintype "passive") (solder_mask_margin 0.102) (tstamp f6895fc1-c4e3-4ec7-8aff-f69e8bc4c257))
     (pad "3" smd rect (at 2.5 1.2) (size 1.6 1) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 35 "Net-(SW3-C)") (pinfunction "C") (pintype "passive") (solder_mask_margin 0.102) (tstamp f8936c55-762c-4448-b191-26e6556735d7))
-    (model "/Users/sayanee/Desktop/JS102011JCQN/JS102011JCQN.step"
+    (model "${KIPRJMOD}/library/3d_models/CK_slide_switch_spdt_JS102011JCQN.step"
       (offset (xyz 0 0 1.5))
       (scale (xyz 1 1 1))
       (rotate (xyz 90 180 90))
