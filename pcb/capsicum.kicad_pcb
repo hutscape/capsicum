@@ -48,6 +48,7 @@
 
   (setup
     (pad_to_mask_clearance 0)
+    (grid_origin 100 140)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
       (plot_on_all_layers_selection 0x0000000_00000000)
@@ -7153,6 +7154,24 @@
   )
   (gr_text "CHRG" (at 117.729 121.285) (layer "F.SilkS") (tstamp 7a5149b0-244e-494a-b87f-63a84f62e8a4)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
+  )
+  (dimension (type aligned) (layer "Dwgs.User") (tstamp 7712a028-10f1-4855-b173-8cf832970e19)
+    (pts (xy 100 145) (xy 170 145))
+    (height 0)
+    (gr_text "70.0000 mm" (at 135 143.85) (layer "Dwgs.User") (tstamp 7712a028-10f1-4855-b173-8cf832970e19)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.15) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type aligned) (layer "Dwgs.User") (tstamp 8d053639-17bd-49a3-b6e9-60ae2f3c41d1)
+    (pts (xy 95 85) (xy 95 140))
+    (height 0)
+    (gr_text "55.0000 mm" (at 93.85 112.5 90) (layer "Dwgs.User") (tstamp 8d053639-17bd-49a3-b6e9-60ae2f3c41d1)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.15) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
 
 )
