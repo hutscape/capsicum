@@ -11,7 +11,7 @@ downloads:
   kicad: true
   gerber: false
   bom: true
-  case: false
+  case: true
 features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
   - detail: Connect to WiFi and send a webhook to Zapier for future integrations

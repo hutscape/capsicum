@@ -13,5 +13,5 @@ sequence: 4
 #   - name: case-details-2.png
 #     caption: Case details 2
 threedprint: false
-case: false
+case: true
 ---

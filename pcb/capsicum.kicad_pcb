@@ -3321,6 +3321,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "${KIPRJMOD}/library/3d_models/speaker_28mm.step"
+      (offset (xyz 26 -21.5 11.7))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 180 0 0))
+    )
   )
 
   (footprint "Diode_SMD:D_SOD-123F" (layer "F.Cu")
