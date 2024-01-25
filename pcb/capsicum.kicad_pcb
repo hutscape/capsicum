@@ -5541,6 +5541,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 -90))
     )
+    (model "${KIPRJMOD}/library/3d_models/CR123A_battery.step"
+      (offset (xyz 0 -37.5 7.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 90 90 0))
+    )
   )
 
   (footprint "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" (layer "B.Cu")
