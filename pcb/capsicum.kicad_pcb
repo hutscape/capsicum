@@ -7218,7 +7218,7 @@
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp dae54415-6241-48f3-b7e7-4099f4c917f8))
   (gr_line locked (start 166.5 130.5) (end 169.5 130.5)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp eea05c56-cbb2-4d91-b154-d33298d663a3))
-  (gr_text locked "Capsicum@Hutscape V1.0 Jan 2024\nGet started at hutscape.com/capsicum" (at 151.435 112.695) (layer "B.SilkS") (tstamp 18b232f3-f121-4ccb-9eb1-622e80546c36)
+  (gr_text locked "Capsicum@Hutscape V1.0 Jan 2024\nGet started at hutscape.com/capsicum" (at 148.895 105.71) (layer "B.SilkS") (tstamp 18b232f3-f121-4ccb-9eb1-622e80546c36)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom mirror))
   )
   (gr_text locked "Install date:" (at 150.622 89.662) (layer "B.SilkS") (tstamp 3765ba2a-0b54-4e19-b12b-5a4a63c4f437)
