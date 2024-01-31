@@ -471,6 +471,10 @@
       {
         "netclass": "Power",
         "pattern": "+3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(BT1-+)"
       }
     ]
   },
