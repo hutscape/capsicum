@@ -4,7 +4,7 @@ title: PCB
 permalink: /pcb
 sequence: 3
 
-three_d: false
+three_d: true
 pcb_layout: true
 gerber: false
 ---
