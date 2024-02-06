@@ -14,6 +14,7 @@ downloads:
   case: true
 features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
+  - detail: Add a timeout so that repeated door bell rings are not annoying
   - detail: Connect to WiFi and send a webhook to Zapier for future integrations
   - detail: (Integration) Turn on a light signal when the door bell rings and the sound is off E.g. in a Zoom call
   - detail: (Integration) Send a mobile notification
@@ -74,6 +75,18 @@ features:
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-1">Thanks 🤗</h2>
+    <div class="content is-medium">
+      <ul>
+        <li><a href="https://chinmay.audio/">Chinmay</a> for review, soldering and testing</li>
+        <li><a href="https://www.reddit.com/r/PrintedCircuitBoard/comments/1ag6j6m/review_request_esp32c3_based_board_to_retrofit_a/">Reddit ccommunity</a> for review comments</li>
+      </ul>
     </div>
   </div>
 </section>
