@@ -29,14 +29,14 @@ features:
             <article class="tile is-child notification">
               <p class="title">Teardown</p>
               <p class="subtitle">Look into the internals of an existing <a href="https://s.click.aliexpress.com/e/_Dm6bTXf">wired battery-powered doorbell from FUERS</a> bought on AliExpress, priced below USD $4.00.</p>
-              <a href="{{site.url}}/images/prototype/initial-doorbell.jpg">
-                <img src="{{site.url}}/images/prototype/initial-doorbell.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
+              <a href="{{site.url}}/images/prototype/doorbell.jpg">
+                <img src="{{site.url}}/images/prototype/doorbell.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
               <a href="{{site.url}}/images/prototype/prototype-3.jpg">
                 <img src="{{site.url}}/images/prototype/prototype-3.jpg" alt="FUERS Wired Guest Welcome Doorbell High Quality Energy-saving Door bell Simple Generous Home Store Security Doorbell Button">
               </a>
               <p class="title">Battery</p>
-              <p class="subtitle">It is powered by 2 AAA batteries</p>
+              <p class="subtitle">It is powered by 2 AAA batteries (3V)</p>
               <a href="{{site.url}}/images/prototype/initial-doorbell-power.jpg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell-power.jpg" alt="Power by 2 AAA batteries">
               </a>
@@ -45,15 +45,17 @@ features:
           <div class="tile is-parent">
             <article class="tile is-child notification">
               <p class="title">Chip</p>
-              <p class="subtitle">Chip <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a> is used. It rings "Ding Dong"  2 times. It is a Music chip with a built-in transistor positive trigger.</p>
-              <a href="{{site.url}}/images/prototype/initial-doorbell-chip.jpg">
-                <img src="{{site.url}}/images/prototype/initial-doorbell-chip.jpg" alt="Chip of the original doorbell">
+              <p class="subtitle">Chip TLX210924 is similar to <a href="https://www.yoycart.com/Product/550682313846/">TQ33E-11</a>. It rings "Ding Dong" 2 times. It is a Music chip with a built-in transistor positive trigger and has 6 pinouts from the PCB.</p>
+              <a href="{{site.url}}/images/prototype/prototype-5.jpg">
+                <img src="{{site.url}}/images/prototype/prototype-5.jpg" alt="Chip of the original doorbell">
               </a>
               <a href="{{site.url}}/images/prototype/initial-doorbell-circuit.jpeg">
                 <img src="{{site.url}}/images/prototype/initial-doorbell-circuit.jpeg" alt="Chip circuit">
               </a>
-              <a href="{{site.url}}/images/prototype/initial-doorbell-chip-back.jpg">
-                <img src="{{site.url}}/images/prototype/initial-doorbell-chip-back.jpg" alt="Back of the Chip of the original doorbell">
+              <p class="title">Speaker</p>
+              <p class="subtitle">A speaker of 8ohms, 0.25W is used</p>
+              <a href="{{site.url}}/images/prototype/prototype-4.jpg">
+                <img src="{{site.url}}/images/prototype/prototype-4.jpg" alt="Back of the Chip of the original doorbell">
               </a>
             </article>
           </div>
