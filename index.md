@@ -87,7 +87,7 @@ features:
     <div class="content is-medium">
       <ul>
         <li><a href="https://chinmay.audio/">Chinmay</a> for review, soldering and testing</li>
-        <li><a href="https://www.reddit.com/r/PrintedCircuitBoard/comments/1ag6j6m/review_request_esp32c3_based_board_to_retrofit_a/">Reddit ccommunity</a> for review comments</li>
+        <li><a href="https://www.reddit.com/r/PrintedCircuitBoard/comments/1ag6j6m/review_request_esp32c3_based_board_to_retrofit_a/">Reddit community</a> for review comments</li>
       </ul>
     </div>
   </div>
