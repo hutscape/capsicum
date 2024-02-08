@@ -23,10 +23,14 @@ exclude: [
   "*.elf",
   "*.map",
   "*.kicad*",
-  "fp-*",
+  "pcb/fp-*",
+  "pcb/sym-lib-table",
+  "pcb/library",
   "*.FCStd",
   "*.stl",
-  "*.FCBak"
+  "*.FCBak",
+  "*-backups",
+  "references"
   ]
 include: ["_data"]
 collections:
