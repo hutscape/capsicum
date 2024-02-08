@@ -21,7 +21,12 @@ exclude: [
   "*.ino",
   "*.bin",
   "*.elf",
-  "*.map"
+  "*.map",
+  "*.kicad*",
+  "fp-*",
+  "*.FCStd",
+  "*.stl",
+  "*.FCBak"
   ]
 include: ["_data"]
 collections:
