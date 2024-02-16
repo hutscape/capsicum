@@ -6,7 +6,7 @@
 class Bell {
 public:
   void init(int bellPin);
-  void ring();
+  void ring(int timeout);
 
 private:
   int bellPin;

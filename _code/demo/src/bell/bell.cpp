@@ -6,9 +6,10 @@ void Bell::init(int bellPin) {
   digitalWrite(this->bellPin, LOW);
 }
 
-void Bell::ring() {
+// Ring the bell with a parameter for the duration and timeout of the bell
+void Bell::ring(int timeout) {
   digitalWrite(this->bellPin, HIGH);
-  delay(5000);
+  delay(timeout);
   digitalWrite(this->bellPin, LOW);
   delay(250);
 }

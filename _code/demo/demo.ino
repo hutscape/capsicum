@@ -12,6 +12,9 @@
 #include "src/webhookClient/webhookClient.h"
 #include "Secret.h"
 
+// Timeout for the bell to ring
+const int bellTimeout = 5000;  // 5 seconds
+
 // GMT+8 (8 hours * 60 minutes * 60 seconds)
 const long timeZoneOffset = 28800;
 const int startTime = 9;  // 9am or 0900h
@@ -82,7 +85,7 @@ void ringBellIfNeeded() {
 
   if (timeManager.isCurrentTimeInRange()) {
     DEBUG_DEBUG("Ring the bell as it's within the time range!");
-    bell.ring();
+    bell.ring(bellTimeout);
     DEBUG_DEBUG("Bell should have rung.");
   } else {
   DEBUG_DEBUG("Not ringing the bell! The time is not right.");
@@ -104,6 +107,6 @@ void ringBell() {
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
 
-  bell.ring();
+  bell.ring(bellTimeout);
   DEBUG_DEBUG("Bell should have rung.");
 }
