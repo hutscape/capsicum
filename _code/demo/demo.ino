@@ -13,7 +13,7 @@
 #include "Secret.h"
 
 // Timeout for the bell to ring
-const int bellTimeout = 5000;  // 5 seconds
+const int bellTimeout = 30000;  // 30 seconds
 
 // GMT+8 (8 hours * 60 minutes * 60 seconds)
 const long timeZoneOffset = 28800;
@@ -46,7 +46,7 @@ void setup() {
   if (wifiConnector.isConnected()) {
     handleConnectedWiFi();
   } else {
-    ringBell();
+    initializeAndRingBell();
   }
 
   ledController.init();
@@ -75,18 +75,12 @@ void handleConnectedWiFi() {
 }
 
 void ringBellIfNeeded() {
-  DEBUG_DEBUG("Initializing bell...");
-  bell.init(BELL_PIN);
-  DEBUG_DEBUG("Bell initialized.");
-
   DEBUG_DEBUG("Initializing time manager...");
   timeManager.init();
   DEBUG_DEBUG("Time manager initialized.");
 
   if (timeManager.isCurrentTimeInRange()) {
-    DEBUG_DEBUG("Ring the bell as it's within the time range!");
-    bell.ring(bellTimeout);
-    DEBUG_DEBUG("Bell should have rung.");
+    initializeAndRingBell();
   } else {
   DEBUG_DEBUG("Not ringing the bell! The time is not right.");
   }
@@ -102,11 +96,11 @@ void sendWebhookToZapier() {
   }
 }
 
-void ringBell() {
+void initializeAndRingBell() {
   DEBUG_DEBUG("Initializing bell...");
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
 
-  bell.ring(bellTimeout);
   DEBUG_DEBUG("Bell should have rung.");
+  bell.ring(bellTimeout);
 }
