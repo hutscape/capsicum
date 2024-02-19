@@ -9,6 +9,7 @@
     "string_view": "cpp",
     "unordered_map": "cpp",
     "vector": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "stdexcept": "cpp"
   }
 }

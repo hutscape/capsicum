@@ -101,6 +101,9 @@ void initializeAndRingBell() {
   bell.init(BELL_PIN);
   DEBUG_DEBUG("Bell initialized.");
 
-  DEBUG_DEBUG("Bell should have rung.");
+  String debugMessage = "Bell should ring with a timeout of "
+    + String(bellTimeout / 1000.0)
+    + "s";
+  DEBUG_DEBUG(debugMessage.c_str());
   bell.ring(bellTimeout);
 }
