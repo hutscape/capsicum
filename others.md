@@ -4,6 +4,15 @@ title: Others
 permalink: /others
 sequence: 6
 
+# Lessons
+lessons:
+  - title: V2.0
+    subtitle: For next iteration
+    list:
+      - name: Use teardrops in KiCAD 8.0
+      - name: Add fudicial markers for pick and place
+      - name: Add more rounded corners and chamfers for timeless product design enclosures
+
 # References
 similar:
   - name: Adafruit QT Py ESP32-C3 WiFi Dev Board
