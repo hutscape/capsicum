@@ -1,9 +1,9 @@
 {
   "bom-total": 75,
   "bom-total-populate": 70,
-  "bom-uniq": 31,
+  "bom-uniq": 30,
   "bom-uniq-th": 4,
-  "bom-uniq-dnp": 3,
+  "bom-uniq-dnp": 2,
   "bom-uniq-smt": 24,
 
   "vendors": 2,
