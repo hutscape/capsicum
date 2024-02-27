@@ -6,7 +6,7 @@ sequence: 3
 
 three_d: true
 pcb_layout: true
-gerber: false
+gerber: true
 
 manufacturing_params_image: pcbway.png
 manufacturing_params:

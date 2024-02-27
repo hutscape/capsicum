@@ -7,9 +7,9 @@ sequence: 1
 manufacturing: false
 downloads:
   schematic: true
-  layout: false
+  layout: true
   kicad: true
-  gerber: false
+  gerber: true
   bom: true
   case: true
 features:
