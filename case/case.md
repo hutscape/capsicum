@@ -21,6 +21,8 @@ manufacturing_params:
     value: PCBWay
   - name: Build time
     value: 5 days
+  - name: Size
+    value: 74.80 mm × 104.80 mm × 18.10 mm
   - name: Material
     value: Resin Standard white material (UTR 8360)
   - name: Color
