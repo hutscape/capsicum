@@ -5541,7 +5541,7 @@
     (property "Vendor" "PCBWay" (at 58.42 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "ESP32-C3-WROOM-02" (at 58.42 118.11 0)
+    (property "MPN" "ESP32-C3-WROOM-02-N4" (at 58.42 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Package" "SMD" (at 58.42 118.11 0)
