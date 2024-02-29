@@ -12,6 +12,8 @@ manufacturing_params_image: pcbway.png
 manufacturing_params:
   - name: "Manufacturer"
     value: "PCBWay"
+  - name: Build time
+    value: "4 days"
   - name: "Size"
     value: "70 x 55 mm"
   - name: "Layers"

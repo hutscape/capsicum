@@ -14,4 +14,17 @@ photos:
     caption: Case details 2
 threedprint: false
 case: true
+
+manufacturing_params_image: case_manufacturing_params.png
+manufacturing_params:
+  - name: Manufacturer
+    value: PCBWay
+  - name: Build time
+    value: 5 days
+  - name: Material
+    value: Resin Standard white material (UTR 8360)
+  - name: Color
+    value: Matte White
+  - name: Process
+    value: SLA
 ---
