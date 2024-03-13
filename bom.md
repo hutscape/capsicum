@@ -3,12 +3,12 @@ layout: bom
 title: Bill of Materials
 permalink: /bom
 sequence: 5
-ibom: false
+ibom: true
 ---
 
-<!--
+<!-- KiCad 7.0.8
 
-======= How to generate BOM in KiCad 7.0.8 ======
+======= How to generate BOM  ======
 
 1. Click the menu item "Bulk edit fields in all schematic".
 2. Ensure the BOM in KiCad has at least these columns:
@@ -39,14 +39,19 @@ ibom: false
     Screw, nuts, spacers
     SWD programming cable
 
-======= How to generate interactive BOM after PCB layout ======
-    1. Ensure Netlist and XML files are latest
-    2. Go to PCB Layout
+======= Generate interactive BOM after PCB layout ======
+
+
+    1. [Install](https://github.com/openscopeproject/InteractiveHtmlBom/wiki/Installation) [InteractiveHtmlBom plugin](https://github.com/openscopeproject/InteractiveHtmlBom) in KiCad's plugin manager
+    2. Go to PCB Editor
     3. Click iBOM menu item
     4. Change the directory in General > Directory > /hutscape/{PROJECT}/bom/
     5. Show first pin in Html default > Check "Highlight first pin"
-    6. Add DNP as a column in Extra fields > Check "DNP"
+    6. Show and Group DNP as a column in Fields > Check "DNP"
     7. Generate ibom.html by clicking "Generate BOM"
+    8. Enable iBom display in bom.md meta data ibom: true
+    9. Start the website server with "make" and check /bom/#interactive-bom URL
+
 
 ====== How to generate BOM Stats file _data/bom.json ======
 
