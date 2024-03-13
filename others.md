@@ -211,6 +211,8 @@ design_start: '2023-10-01'
 design_end: '2024-02-29'
 manufacturing_start: '2024-03-01'
 progress:
+  - month: March 2024
+    details: Send for manufacturing and assembly of 2 prototypes. This phase includes PCB manufacturing, component procurement, pick and place, 3D printing the cases.
   - month: December 2023
     details: Completing the schematics with footprints, MPN and availability of assembly parts.
 ---
