@@ -208,6 +208,8 @@ references:
 
 # Schedule
 design_start: '2023-10-01'
+design_end: '2024-02-29'
+manufacturing_start: '2024-03-01'
 progress:
   - month: December 2023
     details: Completing the schematics with footprints, MPN and availability of assembly parts.
