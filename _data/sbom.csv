@@ -1,0 +1,10 @@
+Component Name,Link,Version,License,Type,Description
+KiCad,https://www.kicad.org/,7.0.8,GNU GPL v3,App,An open source software suite for Electronic Design Automation (EDA)
+InteractiveHtmlBom,https://github.com/openscopeproject/InteractiveHtmlBom/wiki,v8,MIT License,Plugin,Generates a convenient Bill of Materials (BOM) listing 
+FreeCAD,https://www.freecad.org/,0.21.2,GNU GPL  ,App,A 3D parametric modeling application
+kicadStepUp,https://github.com/easyw/kicadStepUpMod/,,GNU Affero General Public License,Plugin,Help in Mechanical Collaboration between KiCad EDA and FreeCAD
+Arduino CLI,https://github.com/arduino/arduino-cli,0.34.2,GNU GPL v3,Framework,Arduino command line tool
+Arduino_DebugUtils,https://github.com/arduino-libraries/Arduino_DebugUtils,1.4.0,GNU GPL v3,Library,Provides functionality useful for debugging sketches via printf-style statements
+NTPClient,https://github.com/arduino-libraries/NTPClient,3.2.1,,Library,Get time from a NTP server and keep it in sync
+Arduino ESP32,https://github.com/espressif/arduino-esp32/tree/master,2.0.14,LGPL-2.1,Library,"Arduino core for the ESP32
+"
