@@ -12,6 +12,7 @@ lessons:
       - name: Use teardrops in KiCAD 8.0
       - name: Add fudicial markers for pick and place
       - name: Add more rounded corners and chamfers for timeless product design enclosures
+      - name: Use a single RGB LED for status indication
 
 # References
 similar:
