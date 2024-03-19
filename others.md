@@ -9,10 +9,12 @@ lessons:
   - title: V2.0
     subtitle: For next iteration
     list:
-      - name: Use teardrops in KiCAD 8.0
-      - name: Add fudicial markers for pick and place
-      - name: Add more rounded corners and chamfers for timeless product design enclosures
-      - name: Use a single RGB LED for status indication
+      - name: Use <a href="https://docs.kicad.org/8.0/en/pcbnew/pcbnew.html">teardrops</a> in KiCAD 8.0
+      - name: Add <a href="https://youtu.be/g4m91gv-4oQ?t=1088">fudicial markers</a> for pick and place
+      - name: Add more rounded corners and chamfers for <a href="https://www.pinterest.com/sayanee/product-design/">timeless product design</a> enclosures
+      - name: Use a <a hreaf="https://github.com/makermoekoe/Picoclick-C3/blob/main/pcb/Picoclick_C3T/picoclick_c3t_v1_bom.csv#L18">single RGB LED</a> for status indication
+      - name: Add <a href="https://forum.kicad.info/t/understanding-multi-sheet-schematics/42922/2">multi sheet schematics</a> for better readability
+      - name: Add <a href="https://github.com/EPFLXplore/XRE_LeggedRobot_HW/blob/master/amulet_controller/Schematic/amulet_controller.pdf"component images and parameter graphs</a> in schematics
 
 # References
 similar:
