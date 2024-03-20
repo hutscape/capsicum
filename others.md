@@ -16,6 +16,7 @@ lessons:
       - name: Add <a href="https://forum.kicad.info/t/understanding-multi-sheet-schematics/42922/2">multi sheet schematics</a> for better readability
       - name: Add component images and parameter graphs<a href="https://github.com/EPFLXplore/XRE_LeggedRobot_HW/blob/master/amulet_controller/Schematic/amulet_controller.pdf"</a> in schematics
       - name: Use <a href="https://github.com/arduino-libraries/Arduino_ESP32_OTA">OTA updates</a> for firmware
+      - name: Use a better quality <a href="https://www.digikey.com/en/products/detail/nidec-components-corporation/CL-SB-22A-11T/3507836">slide switch DPDT</a> for <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2/Download#infotabs">better tactile feedback</a>
 
 # References
 similar:
