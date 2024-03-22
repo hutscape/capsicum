@@ -18,6 +18,16 @@ lessons:
       - name: Use <a href="https://github.com/arduino-libraries/Arduino_ESP32_OTA">OTA updates</a> for firmware
       - name: Use a better quality <a href="https://www.digikey.com/en/products/detail/nidec-components-corporation/CL-SB-22A-11T/3507836">slide switch DPDT</a> for <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2/Download#infotabs">better tactile feedback</a>
 
+  - title: Lessons learnt
+    subtitle: Improvements for the next version
+    list:
+      - name: <strong>Case</strong> - Make the text height bigger for LEDs and ON/OFF power switch
+      - name: <strong>Case</strong> - Add more chamfers and rounded corners for a better aesthetic
+      - name: <strong>Teeth and groves</strong> - Make the teeth thicker for better strength
+      - name: <strong>Teeth and groves</strong> - Add holder in the teeth to that the top and bottom case do not slide
+      - name: <strong>Teeth and grooves</strong> - Include visual cues on the exterior for finger placement
+      - name: <strong>Battery</strong> - Use flat LiPo battery for a compact design
+
 # References
 similar:
   - name: Adafruit QT Py ESP32-C3 WiFi Dev Board
