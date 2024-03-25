@@ -169,15 +169,14 @@ similar:
 
 references:
   - topic: Flashing ESP32-C3-WROOM-02
-    - name: ESP32-C3 needs external flash chip?
-      url: https://www.esp32.com/viewtopic.php?t=31890
     - name: flashing firmware to raw ESP32-C3-wroom-02-N4 in a custom PCB
       url: https://www.esp32.com/viewtopic.php?f=12&t=34290
     - name: Esp32-c3-wroom-02 wiring module?
       url: https://forum.arduino.cc/t/esp32-c3-wroom-02-wiring-module-solved/1027662
     - name: Getting Started with ESP-WROOM-02
       url: https://learn.edwinrobotics.com/getting-started-with-esp-wroom-02/
-
+    - name: Flashing an ESP32-WROOM ?
+      url: https://www.reddit.com/r/esp32/comments/161mbvx/flashing_an_esp32wroom/
   - topic: Components to consider
     list:
       - name: ESP32-C3-MINI-1-N4
