@@ -27,6 +27,7 @@ lessons:
       - name: <strong>Teeth and groves</strong> - Add holder in the teeth to that the top and bottom case do not slide
       - name: <strong>Teeth and grooves</strong> - Include visual cues on the exterior for finger placement
       - name: <strong>Battery</strong> - Use flat LiPo battery for a compact design
+      - name: <strong>PCB</strong> - Add silkscreen pin labels for all connectors that extend outside the PCB E.g. pin headers or USB-C
 
 # References
 similar:
@@ -166,7 +167,6 @@ similar:
       - type: melody generator IC
         name: IC555
 
-
 references:
   - topic: Flashing ESP32-C3-WROOM-02
     - name: flashing firmware to raw ESP32-C3-wroom-02-N4 in a custom PCB
@@ -234,6 +234,9 @@ references:
 design_start: '2023-10-01'
 design_end: '2024-02-29'
 manufacturing_start: '2024-03-01'
+manufacturing_end: '2024-03-21'
+manufacturing_end: '2024-03-21'
+integration_start: '2024-03-22'
 progress:
   - month: March 2024
     details: Send for manufacturing and assembly of 2 prototypes. This phase includes PCB manufacturing, component procurement, pick and place, 3D printing the cases.
