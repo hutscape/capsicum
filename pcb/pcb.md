@@ -144,7 +144,7 @@ Generate Position file:
 1. Check *.pos file in `gerbers` folder
 
 Compress and ZIP the `gerbers` folder and create a git tag with the version number.
-1. Rename `gerbers` zip folder to project-gerbers-V1.0.0.zip
+1. Rename `gerbers` zip folder to `Project-gerbers-V1.0.0.zip`
 1. Create a git tag with the version number
     ```
     git tag -a V1.0.0 -m "Release V1.0.0"
@@ -153,4 +153,5 @@ Compress and ZIP the `gerbers` folder and create a git tag with the version numb
     ```
     git push origin V1.0.0
     ```
+1. Cut a release in GitHub with the version number and attach the `Project-gerbers-V1.0.0.zip` zip file.
 -->
