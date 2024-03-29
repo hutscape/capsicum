@@ -1,4 +1,4 @@
-Designator,Value,Qty,Package,Category,MANUFACTURER,MPN,Datasheet,Vendor,Link,Unit,Total,Description,DNP
+Designator,Value,Qty,Package,Category,Manufacturer,MPN,Datasheet,Vendor,Link,Unit,Total,Description,DNP
 BT1,16320 / CR123A battery holder,1,SMD,Connector,EAEONXE,,https://www.aliexpress.com/item/1005004821679671.html,AliExpress,https://s.click.aliexpress.com/e/_DBxLGXX,2.2200,2.2200,Battery Holder CR123A:CR123_holder,
 "C1-C5, C11",10uF,6,0603,Electronics,YAGEO,CC0603KRX5R6BB106,https://www.yageo.com/upload/website/yageo_High%20Capacitance%20MLCCs_2016_19050911_141.pdf,PCBWay,https://www.digikey.sg/en/products/detail/yageo/CC0603KRX5R6BB106/5195191,0.0284,0.1704,Capacitor_SMD:C_0603_1608Metric,
 "C6-C8, C12, C13",1uF,5,0603,Electronics,Kyocera,06033D105MAT2A,https://datasheets.kyocera-avx.com/cx5r.pdf,PCBWay,https://www.digikey.co.nz/en/products/detail/kyocera-avx/KGM15BR51E105MT/1645810,0.1748,0.8740,Capacitor_SMD:C_0603_1608Metric,
