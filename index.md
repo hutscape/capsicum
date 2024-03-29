@@ -11,6 +11,7 @@ downloads:
   kicad: true
   gerber: true
   bom: true
+  freecad: true
   case: true
 features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
