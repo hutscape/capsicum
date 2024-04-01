@@ -1,6 +1,6 @@
 ---
 layout: code
-title: Demo
+title: Demo on breadboard
 description: Press the doorbell to sound the bell and send a notification if the current time is appropriate
 references:
   - name: Schematic of ESP32-C3-DevKitM-1

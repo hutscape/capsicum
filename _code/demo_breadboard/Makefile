@@ -1,5 +1,5 @@
-BOARD?=esp32:esp32:esp32c3:CDCOnBoot=cdc
-PORT?=/dev/cu.usbmodem1410*
+BOARD?=esp32:esp32:esp32c3
+PORT?=/dev/cu.usbserial-*
 BUILD=build
 
 .PHONY: default lint compile upload clean
