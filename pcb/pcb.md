@@ -7,6 +7,7 @@ sequence: 3
 three_d: true
 pcb_layout: true
 gerber: true
+manufactured_pcb: true
 
 # maximum number of images prototype-n.jpg in folder images/pcb/prototype
 max_prototype_images: 8
