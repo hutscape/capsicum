@@ -19,7 +19,7 @@ features:
 images:
   prototype: demo-prototype.jpg
   console: demo-console.png
-  schematic: demo-schematic.png
+  schematic: schematic.png
 ---
 
 This example shows how to use the ESP32-C3 dev board to do the following:
