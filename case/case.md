@@ -12,7 +12,7 @@ photos:
     caption: Case details 1
   - name: case-details-2.png
     caption: Case details 2
-threedprint: false
+threedprint: true
 case: true
 
 manufacturing_params_image: case_manufacturing_params.png
