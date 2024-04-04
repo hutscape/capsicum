@@ -41,6 +41,8 @@ lessons:
       - name: (Case) <strong>Teeth and groves</strong> - Make the teeth thicker for better strength
       - name: (Case) <strong>Teeth and groves</strong> - Add holder in the teeth to that the top and bottom case do not slide
       - name: (Case) <strong>Teeth and grooves</strong> - Include visual cues on the exterior for finger placement
+      - name: (Case) PCB holder screw lug can be shorter
+      - name: (Case) Add an LED slot to view the charge LED from the outside without opening the case
       - name: (Power) <strong>Battery</strong> - Use flat LiPo battery for a compact design
       - name: (Layout) <strong>PCB</strong> - Add silkscreen pin labels for all connectors that extend outside the PCB E.g. pin headers or USB-C
       - name: Use Conventional Commit Messages for <a href="https://www.conventionalcommits.org/en/v1.0.0/">better git history</a> with scopes such as schematic, layout, bom, firmware, case, power.
