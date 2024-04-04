@@ -36,6 +36,9 @@ TimeManager timeManager(timeZoneOffset, startTime, endTime);
 WebhookClient webhookClient;
 
 void setup() {
+  // TODO: Under an if-case remove the Serial.begin and while loop
+  // for production to avoid getting stuck in the while loop
+
   Serial.begin(115200);
   while (!Serial) { }
 
