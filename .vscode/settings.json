@@ -10,6 +10,15 @@
     "unordered_map": "cpp",
     "vector": "cpp",
     "ios": "cpp",
-    "stdexcept": "cpp"
+    "stdexcept": "cpp",
+    "__tree": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "valarray": "cpp",
+    "associative_base": "cpp",
+    "iterator": "cpp",
+    "serstream": "cpp"
   }
 }
