@@ -37,3 +37,13 @@ On Arduino IDE, enable the option `Tools > USB CDC on Boot > Enabled`
 [![Prototype]({{ site.url }}/images/code/blinky-arduino-settings.jpg)]()
 
 or on `arduino-cli`, add the FQBN option as `--fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc`
+
+### Measure power consumption
+
+Connect the test points `GND` and `VBAT` to nRF Power Profiler kit to measure the power consumption. **DO NOT insert the battery in the PCB** to ensure the power is only supplied from the nRF Power Profiler kit.
+
+The power consumption of the PCB is around `20.9mA` when the LED is on and `20.15mA` when the LED is off.
+
+[![Power consumption graph]({{ site.url }}/images/code/blinky-measure-power-graph.png)]()
+
+[![Measure power consumption with nRF profiler kit]({{ site.url }}/images/code/blinky-measure-power.jpg)]()
