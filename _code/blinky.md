@@ -23,15 +23,17 @@ features:
   - blinky
   - serial
 images:
-  # prototype: demo-prototype.jpg
-  # console: demo-console.png
-  # schematic: demo-schematic.png
+  prototype: blinky-prototype.jpg
+  console: blinky-console.png
+  schematic: schematic.png
 ---
 
 Flash in this simplest blinky code to test the PCB.
 
 ### Troubleshooting: Cannot view serial prints
 
-On Arduino IDE, enable the option Tools > USB CDC on Boot > Enabled
+On Arduino IDE, enable the option `Tools > USB CDC on Boot > Enabled`
 
-or on arduino-cli, add the FQBN option as `-- fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc`
+[![Prototype]({{ site.url }}/images/code/blinky-arduino-settings.jpg)]()
+
+or on `arduino-cli`, add the FQBN option as `--fqbn esp32:esp32:esp32c3:CDCOnBoot=cdc`
