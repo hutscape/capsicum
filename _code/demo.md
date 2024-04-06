@@ -29,3 +29,20 @@ This example shows how to use the ESP32-C3 dev board to do the following:
 1. Then, sound the bell if the time is fine
 1. Then, send a HTTPS POST to Zapier
 1. Then go back to sleep again until the bell is pressed
+
+### Power consumption with no optimisation
+
+The average power consumption of the PCB no optimisation:
+
+- with 2 power LEDs
+- no firmware optimisation
+- radio is on
+
+The average power consumption is:
+
+- `3.87mA` in deep sleep mode
+- `25.69mA` for `30s` during the timeout after the bell is pressed and the Ding Dong sound is played
+- `31.94mA` for `34s` during the entire cycle of the bell press and going to sleep
+- `70.62mA` for `6s` during the Ding Dong sound
+
+[![Demo power consumption graph with no optimisation]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)

@@ -53,6 +53,8 @@ void setup() {
     handleConnectedWiFi();
   } else {
     initializeAndRingBell();
+    // TODO: Turn off WiFi
+    // TODO: Handle timeout in the main loop
   }
 
   ledController.init();
