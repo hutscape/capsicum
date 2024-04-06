@@ -52,16 +52,20 @@ void setup() {
   if (wifiConnector.isConnected()) {
     handleConnectedWiFi();
   } else {
-    initializeAndRingBell();
-    // TODO: Turn off WiFi
-    // TODO: Handle timeout in the main loop
+    initializeAndRingBell();˝
   }
 
-  ledController.init();
+  delay(bellTimeout);  // Timeout for the doorbell
+
+  #ifndef PRODUCTION
+    ledController.init();
+  #endif
 }
 
 void loop() {
-  ledController.blink(1);
+  #ifndef PRODUCTION
+    ledController.blink(1);
+  #endif
 
   if (sleepManager.shouldGoToSleep()) {
     DEBUG_INFO("Going to sleep");
@@ -80,6 +84,8 @@ void handleConnectedWiFi() {
   // Uncomment below to use for production
   // or to use below the 100/month Zapier limit
   // sendWebhookToZapier();
+
+  wifiConnector.disconnect();
 }
 
 void ringBellIfNeeded() {
@@ -113,5 +119,5 @@ void initializeAndRingBell() {
     + String(bellTimeout / 1000.0)
     + "s";
   DEBUG_DEBUG(debugMessage.c_str());
-  bell.ring(bellTimeout);
+  bell.ring();
 }

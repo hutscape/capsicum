@@ -12,6 +12,7 @@ public:
   void connect();
   bool isConnected();
   const char* getSSID();
+  void disconnect();
 
 private:
   const char* ssid;

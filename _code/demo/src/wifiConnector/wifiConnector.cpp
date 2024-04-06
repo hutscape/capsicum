@@ -32,3 +32,8 @@ const char* WiFiConnector::getSSID() {
     return "Not connected";
   }
 }
+
+void WiFiConnector::disconnect() {
+  WiFi.disconnect(true);
+  WiFi.mode(WIFI_OFF);
+}

@@ -46,3 +46,20 @@ The average power consumption is:
 - `70.62mA` for `6s` during the Ding Dong sound
 
 [![Demo power consumption graph with no optimisation]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)
+
+### Power consumption with optimisation
+
+Firmware and hardware optimisation can be done to reduce the power consumption:
+
+- remove the power LEDs, TX and RX LEDs
+- optimise the firmware to turn off the WiFi and radio as soon as the function is done: `WiFi.disconnect(true);` and `WiFi.mode(WIFI_OFF);`
+- optimise the firmware to not blink the user LED
+
+The average power consumption of the PCB with optimisation:
+
+- `73.04uA` in deep sleep mode
+- `17.11mA` for `30s` during the timeout after the bell is pressed and the Ding Dong sound is played
+- `24.93mA` for `34s` during the entire cycle of the bell press and going to sleep
+- `63.99mA` for `6s` during the Ding Dong sound
+
+[![Demo power consumption graph with optimisation]({{ site.url }}/images/code/demo-power-consumption-optimised.jpg)]({{ site.url }}/images/code/demo-power-consumption-optimised.jpg)
