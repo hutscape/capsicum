@@ -1,4 +1,8 @@
-#define DEBUG DBG_VERBOSE
+#ifdef PRODUCTION
+  #define DEBUG DBG_NONE
+#else
+  #define DEBUG DBG_VERBOSE
+#endif
 // Change the debug level accordingly:
 // DBG_NONE, DBG_ERROR, DBG_WARNING,
 // DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
@@ -36,11 +40,10 @@ TimeManager timeManager(timeZoneOffset, startTime, endTime);
 WebhookClient webhookClient;
 
 void setup() {
-  // TODO: Under an if-case remove the Serial.begin and while loop
-  // for production to avoid getting stuck in the while loop
-
-  Serial.begin(115200);
-  while (!Serial) { }
+  if (DEBUG != DBG_NONE) {
+    Serial.begin(115200);
+    while (!Serial) { }
+  }
 
   Debug.setDebugLevel(DEBUG);
   Debug.timestampOn();
