@@ -86,7 +86,7 @@ void handleConnectedWiFi() {
 
   ringBellIfNeeded();
 
-  // Send to Zapier in production environemtn
+  // Send to Zapier in production environment
   // 100/month Zapier limit
   #ifdef PRODUCTION
     sendWebhookToZapier();
