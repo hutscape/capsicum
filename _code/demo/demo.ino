@@ -14,7 +14,7 @@
 #include "src/wifiConnector/wifiConnector.h"
 #include "src/timeManager/timeManager.h"
 #include "src/webhookClient/webhookClient.h"
-// TODO: Calculate battery level
+#include "src/batteryLevel/batteryLevel.h"
 #include "Secret.h"
 
 // Timeout for the bell to ring
@@ -28,6 +28,8 @@ const int endTime = 21;  // 9pm or 2100h
 #define BELL_PIN 7
 #define LED 3
 #define WAKEUP_INTERRUPT_PIN 4
+#define BATTERY_ENABLE_PIN 6
+#define BATTERY_MEASUREMENT_PIN 5
 
 // Connect this pin to HIGH if you want to stay awake
 // E.g. for uploading firmware
@@ -38,14 +40,9 @@ LEDController ledController(LED);
 SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
 WiFiConnector wifiConnector(ssid, pass);
 TimeManager timeManager(timeZoneOffset, startTime, endTime);
+BatteryLevel batteryLevel(BATTERY_ENABLE_PIN, BATTERY_MEASUREMENT_PIN);
+
 WebhookClient webhookClient;
-WebhookClientConfig config = {
-  certificateAuthority,
-  server,
-  host,
-  endpoint,
-  67
-};
 
 void setup() {
   if (DEBUG != DBG_NONE) {
@@ -111,6 +108,8 @@ void ringBellIfNeeded() {
 }
 
 void sendWebhookToZapier() {
+  WebhookClientConfig config = prepareWebhookConfig();
+
   DEBUG_INFO("Sending webhook to Zapier");
   if (!webhookClient.sendWebhook(&config)) {
     DEBUG_ERROR("Unsuccessful sending to Zapier");
@@ -129,4 +128,15 @@ void initializeAndRingBell() {
     + "s";
   DEBUG_DEBUG(debugMessage.c_str());
   bell.ring();
+}
+
+WebhookClientConfig prepareWebhookConfig() {
+  WebhookClientConfig config = {
+    certificateAuthority,
+    server,
+    host,
+    endpoint,
+    batteryLevel.readLevel()
+  };
+  return config;
 }
