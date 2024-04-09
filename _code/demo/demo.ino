@@ -39,6 +39,13 @@ SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
 WiFiConnector wifiConnector(ssid, pass);
 TimeManager timeManager(timeZoneOffset, startTime, endTime);
 WebhookClient webhookClient;
+WebhookClientConfig config = {
+  certificateAuthority,
+  server,
+  host,
+  endpoint,
+  67
+};
 
 void setup() {
   if (DEBUG != DBG_NONE) {
@@ -105,8 +112,7 @@ void ringBellIfNeeded() {
 
 void sendWebhookToZapier() {
   DEBUG_INFO("Sending webhook to Zapier");
-  if (!webhookClient.sendWebhook(
-      certificateAuthority, server, host, endpoint, 67)) {
+  if (!webhookClient.sendWebhook(&config)) {
     DEBUG_ERROR("Unsuccessful sending to Zapier");
   } else {
     DEBUG_INFO("Successful in sending the webhook to Zapier");

@@ -6,18 +6,21 @@
 // Uncomment the line below to enable debug prints
 #define DEBUG_WEBHOOK_CLIENT
 
+struct WebhookClientConfig {
+  const char* rootCA;
+  const char* server;
+  const char* host;
+  const char* endpoint;
+  int dataValue;
+};
+
 class WebhookClient {
 private:
   WiFiClientSecure client;
 
 public:
   WebhookClient();
-  bool sendWebhook(
-    const char* rootCA,
-    const char* server,
-    const char* host,
-    const char* endpoint,
-    int dataValue);
+  bool sendWebhook(const WebhookClientConfig*);
 };
 
 #endif
