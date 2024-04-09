@@ -13,6 +13,6 @@ int BatteryLevel::readLevel() {
   delay(1);  // Allow time for measurement to stabilize
   int raw = analogRead(_measurementPin);
   digitalWrite(_enablePin, LOW);  // Disable measurement
-  // Convert the raw reading to voltage or percentage here, depending on your needs
-  return round(raw / 1023.0);
+  // Convert the raw reading to voltage
+  return round(raw / 1023.0 * 100);
 }
