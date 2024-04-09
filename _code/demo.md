@@ -45,7 +45,7 @@ The average power consumption is:
 - `31.94mA` for `34s` during the entire cycle of the bell press and going to sleep
 - `70.62mA` for `6s` during the Ding Dong sound
 
-<a href="{{ site.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-optimisation.ppk2" class="button is-info">Download nRF PPK2 file</a>
+<a href="{{ site.github.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-optimisation.ppk2" class="button is-info">Download nRF PPK2 file</a>
 
 [![Demo power consumption graph with no optimisation]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)]({{ site.url }}/images/code/demo-power-consumption-no-optimisation.jpg)
 
@@ -64,7 +64,7 @@ The average power consumption of the PCB with optimisation:
 - `24.93mA` for `34s` during the entire cycle of the bell press and going to sleep
 - `63.99mA` for `6s` during the Ding Dong sound
 
-<a href="{{ site.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-led.ppk2" class="button is-info">Download nRF PPK2 file with no LED</a>
+<a href="{{ site.github.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-led.ppk2" class="button is-info">Download nRF PPK2 file with no LED</a>
 
-<a href="{{ site.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-radio.ppk2" class="button is-info">Download nRF PPK2 file with no LED and radio/WiFi</a>
+<a href="{{ site.github.raw_content_url }}/_code/demo/power-profiler/demo-power-consumption-no-radio.ppk2" class="button is-info">Download nRF PPK2 file with no LED and radio/WiFi</a>
 [![Demo power consumption graph with optimisation]({{ site.url }}/images/code/demo-power-consumption-optimised.jpg)]({{ site.url }}/images/code/demo-power-consumption-optimised.jpg)
