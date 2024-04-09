@@ -13,6 +13,8 @@ bool WebhookClient::sendWebhook(
   if (!client.connect(server, 443)) {
     return false;
   } else {
+    // TODO: Change the data2 to be production
+    // TODO: Change the data1 to be battery level
     String data = "data1=" + String(dataValue) + "&data2=testing";
     String request = "POST " + String(endpoint) + " HTTP/1.1\r\n";
     request += "Host: " + String(host) + "\r\n";

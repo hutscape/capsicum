@@ -14,6 +14,7 @@
 #include "src/wifiConnector/wifiConnector.h"
 #include "src/timeManager/timeManager.h"
 #include "src/webhookClient/webhookClient.h"
+// TODO: Calculate battery level
 #include "Secret.h"
 
 // Timeout for the bell to ring
@@ -52,7 +53,7 @@ void setup() {
   if (wifiConnector.isConnected()) {
     handleConnectedWiFi();
   } else {
-    initializeAndRingBell();˝
+    initializeAndRingBell();
   }
 
   delay(bellTimeout);  // Timeout for the doorbell
@@ -81,9 +82,11 @@ void handleConnectedWiFi() {
 
   ringBellIfNeeded();
 
-  // Uncomment below to use for production
-  // or to use below the 100/month Zapier limit
-  // sendWebhookToZapier();
+  // Send to Zapier in production environemtn
+  // 100/month Zapier limit
+  #ifdef PRODUCTION
+    sendWebhookToZapier();
+  #endif
 
   wifiConnector.disconnect();
 }
