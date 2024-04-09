@@ -7,7 +7,7 @@ permalink: /:title
 youtube: https://www.youtube.com/user/@sayanee/videos
 github:
   repository_url: https://github.com/hutscape/capsicum
-  raw_content_url: https://raw.githubusercontent.com/hutscape/capsicum/master
+  raw_content_url: https://raw.githubusercontent.com/hutscape/capsicum/tree/main/
 exclude: [
   "datasheets",
   "Gemfile",
