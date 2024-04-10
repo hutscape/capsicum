@@ -41,7 +41,6 @@ SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
 WiFiConnector wifiConnector(ssid, pass);
 TimeManager timeManager(timeZoneOffset, startTime, endTime);
 BatteryLevel batteryLevel(BATTERY_ENABLE_PIN, BATTERY_MEASUREMENT_PIN);
-
 WebhookClient webhookClient;
 
 void setup() {
@@ -131,12 +130,20 @@ void initializeAndRingBell() {
 }
 
 WebhookClientConfig prepareWebhookConfig() {
+  const char* environment = "testing";
+
+  #ifdef PRODUCTION
+    const char* environment = "production";
+  #endif
+
   WebhookClientConfig config = {
     certificateAuthority,
     server,
     host,
     endpoint,
-    batteryLevel.readLevel()
+    batteryLevel.readLevel(),
+    environment
   };
+
   return config;
 }

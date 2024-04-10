@@ -9,8 +9,10 @@ bool WebhookClient::sendWebhook(
   if (!client.connect(config->server, 443)) {
     return false;
   } else {
-    // TODO: Change the data2 to be production
-    String data = "data1=" + String(config->dataValue) + "&data2=testing";
+    String data = "data1="
+      + String(config->batteryLevel)
+      + "&data2="
+      + String(config->environment);
     String request = "POST " + String(config->endpoint) + " HTTP/1.1\r\n";
     request += "Host: " + String(config->host) + "\r\n";
     request += "Content-Type: application/x-www-form-urlencoded\r\n";
