@@ -8,6 +8,7 @@ BatteryLevel::BatteryLevel(int enablePin, int measurementPin)
   digitalWrite(_enablePin, LOW);  // Assume active high enable
 }
 
+// FIX: This function is returning 0 all the time
 int BatteryLevel::readLevel() {
   digitalWrite(_enablePin, HIGH);  // Enable measurement
   delay(1);  // Allow time for measurement to stabilize
