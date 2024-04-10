@@ -35,7 +35,11 @@ compile: clean lint display
 	fi
 
 upload:
-	arduino-cli upload --fqbn $(BOARD) --port $(PORT) --input-dir $(BUILD)
+	@if [ -n "$(PORT)" ]; then \
+		arduino-cli upload --fqbn $(BOARD) --port $(PORT) --input-dir $(BUILD); \
+	else \
+		echo "Port $(PORT) is not available. Please check if another serial monitor is using it, or press BOOT-RESET button on board the PCB."; \
+	fi
 
 clean:
 	rm -rf build
