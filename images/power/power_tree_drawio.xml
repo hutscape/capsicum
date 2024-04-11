@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile modified="2024-04-11T05:31:51.538Z" host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Fu2tfRzF2vM8FT_wBxWL" version="24.2.3">
+  <diagram id="n-DrzPOWHPoPWbiGaJby" name="Page-1">
+    <mxGraphModel dx="683" dy="379" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2ideFoqtM5jmrgXCfnrA-1" target="2ideFoqtM5jmrgXCfnrA-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-1" value="LDO&lt;div&gt;AP2112K&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="380" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2ideFoqtM5jmrgXCfnrA-2" target="PJpoWeTZBdr2OPLbivEH-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="435" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="2ideFoqtM5jmrgXCfnrA-2" target="PJpoWeTZBdr2OPLbivEH-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2ideFoqtM5jmrgXCfnrA-2" target="PJpoWeTZBdr2OPLbivEH-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="435" />
+              <mxPoint x="640" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="2ideFoqtM5jmrgXCfnrA-2" target="PJpoWeTZBdr2OPLbivEH-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-2" value="Microcontroller&lt;div&gt;ESP32-C3-WROOM-02&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="405" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-7" value="" style="endArrow=classic;html=1;entryX=-0.025;entryY=0.355;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="2ideFoqtM5jmrgXCfnrA-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="420" as="sourcePoint" />
+            <mxPoint x="230" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-8" value="" style="endArrow=classic;html=1;entryX=-0.028;entryY=0.723;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="2ideFoqtM5jmrgXCfnrA-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="460" as="sourcePoint" />
+            <mxPoint x="230" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-9" value="5V (USB-C) VUSB" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="117.5" y="400" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-11" value="3.7V (16320) VBAT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="117.5" y="460" width="125" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2ideFoqtM5jmrgXCfnrA-12" value="3.3V" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="400" y="410" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-4" value="&lt;div&gt;Ding Dong&lt;/div&gt;&lt;div&gt;Audio for doorbell&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-5" value="&lt;div&gt;Wakeup button&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="390" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-6" value="&lt;div&gt;User LED&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="450" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJpoWeTZBdr2OPLbivEH-8" value="&lt;div&gt;Measure &lt;br&gt;battery level&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="500" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
