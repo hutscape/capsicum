@@ -5,6 +5,8 @@
 #include <WiFiAP.h>
 
 #define BATTERY_ENABLE_PIN 6
+// FIX: Change pin from GPIO5 (ADC2) to GPIO0 (ADC1)
+// Github Issue: https://github.com/hutscape/capsicum/issues/5
 #define BATTERY_MEASURE_PIN 5
 
 const char *ssid = "batt";
