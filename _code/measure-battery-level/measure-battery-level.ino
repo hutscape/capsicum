@@ -4,6 +4,9 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 
+#define BATTERY_ENABLE_PIN 6
+#define BATTERY_MEASURE_PIN 5
+
 const char *ssid = "batt";
 const char *password = "12345678";
 WiFiServer server(80);
@@ -34,25 +37,30 @@ void loop() {
     String currentLine = "";
     while (client.connected()) {
       if (client.available()) {
-        char c = client.read();
-        Serial.write(c);
-        if (c == '\n') {
-          if (currentLine.length() == 0) {
-            client.println("HTTP/1.1 200 OK");
-            client.println("Content-type:text/html");
-            client.println();
-            client.print("hello world");
-            client.println();
-            break;
-          } else {
-            currentLine = "";
-          }
-        } else if (c != '\r') {
-          currentLine += c;
-        }
+        client.println("HTTP/1.1 200 OK");
+        client.println("Content-type:text/html");
+        client.println();
+        client.print("hello world");
+        client.println();
+        break;
       }
     }
     client.stop();
     Serial.println("Client Disconnected.");
   }
+}
+
+float measureBatteryVoltage() {
+  pinMode(BATTERY_ENABLE_PIN, OUTPUT);
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
+
+  delay(100);
+
+  int rawValue = analogRead(BATTERY_MEASURE_PIN);
+  // TODO: Fix schematic to use 10k instead of 100k
+  float voltage = rawValue * (3.3 / 4095);
+
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);
+
+  return voltage;
 }

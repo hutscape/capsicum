@@ -11,6 +11,10 @@ references:
     url: https://github.com/espressif/arduino-esp32/blob/master/variants/esp32c3/pins_arduino.h
   - name: Create an Access Point
     url: https://raw.githubusercontent.com/espressif/arduino-esp32/990e3d5b431b63b4adc364b045a79afdad645a3f/libraries/WiFi/examples/WiFiAccessPoint/WiFiAccessPoint.ino
+  - name: How to check the battery voltage
+    url: https://wiki.seeedstudio.com/check_battery_voltage/
+  - name: Power Management
+    url: https://learn.adafruit.com/adafruit-feather-m4-express-atsamd51/power-management#measuring-battery-3010518
 difficulty: medium
 features:
   - esp32c3
@@ -29,5 +33,5 @@ images:
 1. Remove the USB-C cable used for firmware upload
 1. Turn on the power switch
 1. Connect to access point `batt` with password `12345678`
-1. Browser to `http://192.168.4.1/` on the browser
+1. Browser to `http://192.168.4.1` on the browser
 1. View `hello world`
