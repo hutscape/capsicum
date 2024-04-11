@@ -5,7 +5,8 @@
       "includePath": [
         "${workspaceFolder}/**",
         "/usr/local/include",
-        "~/Documents/Arduino/libraries/**"
+        "~/Documents/Arduino/libraries/**",
+        "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.14/libraries/**"
       ],
       "defines": [],
       "macFrameworkPath": [
@@ -20,7 +21,8 @@
         "path": [
           "${workspaceFolder}/**",
           "/usr/local/include",
-          "~/Documents/Arduino/libraries/**"
+          "~/Documents/Arduino/libraries/**",
+          "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.14/libraries/**"
         ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
