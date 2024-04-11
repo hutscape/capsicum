@@ -2,7 +2,7 @@
 layout: resources
 title: Resources
 permalink: /resources
-sequence: 7
+sequence: 8
 
 similar:
   - name: Adafruit QT Py ESP32-C3 WiFi Dev Board
