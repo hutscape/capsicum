@@ -69,3 +69,24 @@ Based on the above values, the battery life can be calculated with this python c
 {% highlight python %}
 {% include_relative power/calc_battery_life.py %}
 {% endhighlight %}
+
+## Battery measurement circuit
+
+The battery measurement circuit is simulated in [Falstad](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAmWDLMgZgBxmcgCxg4CcS6IFkVApgLRhgBQYA7MiAYV4TewDZeNGmxBZoWcZKiyYSAOIBDAC60QANQD2AGxVKA5rWYB3cQk7IEQrBfGQekU+ctEX4NkJYAzLjhzC7kQ0WFJg0EgwGMwASu6C8YSOsnwghNCcIlARzADGXG7BfgFFItAQUXCkfJCeVViQAliECI6wkCwATsXgpJyhXn2yYPDwzgO9-XZgQ05myP6TPaXMBu4NPLb9mHLMWuIgAsl8pKRU2RVcB1jMQA).
+
+```
+$ 1 0.000005 1.5642631884188172 51 5 50 5e-11
+172 224 240 176 240 0 7 0 3.3 0 0 0.5 Gate Voltage
+w 352 256 352 304 0
+w 352 224 352 176 1
+f 288 240 352 240 33 1.5 0.02
+R 352 176 352 144 0 0 40 4.2 0 0 0.5
+c 224 240 288 240 0 0.1 0.0009400760094474308 0.001
+r 288 192 336 192 0 1000000
+w 336 192 352 192 0
+w 288 192 288 240 0
+g 352 304 352 320 0 0
+o 3 64 0 4099 5 0.1 0 2 3 3
+```
+
+With a p-channel MOSFET, when the gate voltage is `0V` or `LOW`, the battery voltage is measured. When the gate voltage is `3.3V` or `HIGH`, the battery voltage cannot be measured.
