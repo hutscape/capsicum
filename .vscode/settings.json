@@ -19,6 +19,7 @@
     "valarray": "cpp",
     "associative_base": "cpp",
     "iterator": "cpp",
-    "serstream": "cpp"
+    "serstream": "cpp",
+    "__locale": "cpp"
   }
 }
