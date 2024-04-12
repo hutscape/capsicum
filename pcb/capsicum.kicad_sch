@@ -3382,7 +3382,7 @@
     (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70" (at 100.33 59.055 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
-    (property "Datasheet" "http://www.farnell.com/datasheets/1835997.pdf" (at 105.41 60.96 0)
+    (property "Datasheet" "https://www.onsemi.com/pdf/datasheet/nts2101p-d.pdf" (at 105.41 60.96 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Package" "SC-70-3 (SOT323)" (at 105.41 60.96 0)
