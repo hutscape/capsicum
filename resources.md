@@ -201,7 +201,7 @@ references:
       - name: Battery Voltage Monitoring
         url: https://electronics.stackexchange.com/questions/424627/battery-voltage-monitoring
       - name: Zero-power battery measurement
-        url: https://jeelabs.org/2013/05/17/zero-powe-battery-measurement/index.html
+        url: https://web.archive.org/web/20230602034059/https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/index.html
       - name: Low Power battery measurement switch?
         url: https://forum.arduino.cc/t/low-power-battery-measurement-switch/1171203
 ---
