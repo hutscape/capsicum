@@ -12,6 +12,8 @@ manufacturing_end: '2024-03-21'
 manufacturing_end: '2024-03-21'
 integration_start: '2024-03-22'
 progress:
+  - month: April 2024
+    details: Board bring-up and debug of the first prototype PCB
   - month: March 2024
     details: Send for manufacturing and assembly of 2 prototypes. This phase includes PCB manufacturing, component procurement, pick and place, 3D printing the cases.
   - month: December 2023
@@ -25,6 +27,7 @@ lessons:
       - name: (Layout) Use <a href="https://docs.kicad.org/8.0/en/pcbnew/pcbnew.html">teardrops</a> in KiCAD 8.0
       - name: (Layout) Add <a href="https://youtu.be/g4m91gv-4oQ?t=1088">fudicial markers</a> for pick and place
       - name: (Case) Add more rounded corners and chamfers for <a href="https://www.pinterest.com/sayanee/product-design/">timeless product design</a> enclosures
+      - name: (Case) Following DFA (Design for Assmebly), make the case easier to assemble by creating assymetric screw hole positions on the PCB and case
       - name: (Schematic) Use a <a hreaf="https://github.com/makermoekoe/Picoclick-C3/blob/main/pcb/Picoclick_C3T/picoclick_c3t_v1_bom.csv#L18">single RGB LED</a> for status indication
       - name: (Schematic) Add <a href="https://forum.kicad.info/t/understanding-multi-sheet-schematics/42922/2">multi sheet schematics</a> for better readability
       - name: (Schematic) Add component images and parameter graphs<a href="https://github.com/EPFLXplore/XRE_LeggedRobot_HW/blob/master/amulet_controller/Schematic/amulet_controller.pdf"</a> for better understanding
