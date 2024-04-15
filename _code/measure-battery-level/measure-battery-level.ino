@@ -1,83 +1,29 @@
-// https://raw.githubusercontent.com/espressif/arduino-esp32/990e3d5b431b63b4adc364b045a79afdad645a3f/libraries/WiFi/examples/WiFiAccessPoint/WiFiAccessPoint.ino
-
-#include <WiFi.h>
-#include <WiFiClient.h>
-#include <WiFiAP.h>
+// The code turns ON the MOSFET for 2 seconds
+// and then turns it OFF for 2 seconds.
+// The LED is also turned ON and OFF to indicate the state of the MOSFET.
+// The serial monitor is used to print the state of the MOSFET.
 
 #define LED 3
 #define BATTERY_ENABLE_PIN 6
-// FIX: Change pin from GPIO5 (ADC2) to GPIO0 (ADC1)
-// Github Issue: https://github.com/hutscape/capsicum/issues/5
 #define BATTERY_MEASURE_PIN 0
 
-const char *ssid = "batt";
-const char *password = "12345678";
-WiFiServer server(80);
-
-// TODO: Add battery measurement
 void setup() {
   Serial.begin(115200);
   Serial.println();
-  Serial.println("Configuring access point...");
 
   pinMode(LED, OUTPUT);
-  pinMode(BATTERY_ENABLE_PIN, HIGH);
-
-  if (!WiFi.softAP(ssid, password)) {
-    log_e("Soft AP creation failed.");
-    while (1) {}
-  }
-  IPAddress myIP = WiFi.softAPIP();
-  Serial.print("AP IP address: ");
-  Serial.println(myIP);
-  server.begin();
-
-  Serial.println("Server started");
-  Serial.print("Battery Analog level: ");
-  Serial.println(measureBatteryVoltage());
+  pinMode(BATTERY_ENABLE_PIN, OUTPUT);
 }
 
 void loop() {
-  WiFiClient client = server.accept();
+  // FIX: BATTERY_ENABLE_PIN voltage does not change whether it is HIGH or LOW
+  pinMode(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
+  digitalWrite(LED, HIGH);
+  Serial.print("MOSFET is ON");
+  delay(2000);
 
-  if (client) {
-    Serial.println("New Client.");
-    String currentLine = "";
-    while (client.connected()) {
-      if (client.available()) {
-        digitalWrite(LED, HIGH);
-
-        client.println("HTTP/1.1 200 OK");
-        client.println("Content-type:text/html");
-        client.println();
-
-        client.print("Battery Analog Level: ");
-        client.println(measureBatteryVoltage());
-
-        client.println();
-        break;
-      }
-    }
-    client.stop();
-    Serial.println("Client Disconnected.");
-    digitalWrite(LED, LOW);
-  }
-}
-
-float measureBatteryVoltage() {
-  pinMode(BATTERY_ENABLE_PIN, LOW);
-  delay(1000);
-
-  int sum = 0;
-  for (int i = 0; i < 100; i++) {
-    sum = sum + analogRead(BATTERY_MEASURE_PIN);
-  }
-  float mean = sum/100.0;
-  float adcValue = mean * (1.1 / 4096.0);
-  float batteryVoltage = adcValue * 11.0;
-  // TODO: Fix schematic to use 10k instead of 100k
-
-  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
-
-  return batteryVoltage;
+  pinMode(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
+  digitalWrite(LED, LOW);
+  Serial.print("MOSFET is OFF");
+  delay(2000);
 }
