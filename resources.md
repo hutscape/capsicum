@@ -182,10 +182,12 @@ references:
         url: https://www.aliexpress.com/item/1005005069433062.html
         description: 3cm 0.5W miniature subwoofer 8ohm speaker
 
-  - topic: Snap fit 3D printed enclosure
+  - topic: Snap-fit and screwless 3D-printed enclosures
     list:
       - name: Adafruit Feather Scorpio Snap Fit Case
         url: https://learn.adafruit.com/feather-scorpio-snap-fit-case/overview
+      - name: Adafruit Raspberry Pi 5 3D Printed Case
+        url: https://learn.adafruit.com/pi-5-case/cad-files
       - name: No-screw PCB placement in a snap fit 3D printed case
         url: https://www.youtube.com/watch?v=m_-d8xcSDQs
       - name: Simple SNAP FIT ENCLOSURE Design

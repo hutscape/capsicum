@@ -22,7 +22,7 @@ progress:
 # Quality
 lessons:
   - title: V2.0
-    subtitle: For next iteration
+    subtitle: Improvements for the next version
     list:
       - name: (Layout) Use <a href="https://docs.kicad.org/8.0/en/pcbnew/pcbnew.html">teardrops</a> in KiCAD 8.0
       - name: (Layout) Add <a href="https://youtu.be/g4m91gv-4oQ?t=1088">fudicial markers</a> for pick and place
@@ -30,15 +30,11 @@ lessons:
       - name: (Case) Following DFA (Design for Assmebly), make the case easier to assemble by creating assymetric screw hole positions on the PCB and case
       - name: (Schematic) Use a <a hreaf="https://github.com/makermoekoe/Picoclick-C3/blob/main/pcb/Picoclick_C3T/picoclick_c3t_v1_bom.csv#L18">single RGB LED</a> for status indication
       - name: (Schematic) Add <a href="https://forum.kicad.info/t/understanding-multi-sheet-schematics/42922/2">multi sheet schematics</a> for better readability
-      - name: (Schematic) Add component images and parameter graphs<a href="https://github.com/EPFLXplore/XRE_LeggedRobot_HW/blob/master/amulet_controller/Schematic/amulet_controller.pdf"</a> for better understanding
+      - name: (Schematic) Add component images and parameter graphs <a href="https://github.com/EPFLXplore/XRE_LeggedRobot_HW/blob/master/amulet_controller/Schematic/amulet_controller.pdf">for better understanding</a>
       - name: (Firmware) Use <a href="https://github.com/arduino-libraries/Arduino_ESP32_OTA">OTA updates</a> for firmware
       - name: (BOM) Use a better quality <a href="https://www.digikey.com/en/products/detail/nidec-components-corporation/CL-SB-22A-11T/3507836">slide switch DPDT</a> for <a href="https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2/Download#infotabs">better tactile feedback</a>
       - name: (Schematic) Add a switch to turn on and off wireless communication to fallback to legacy functionality
       - name: (BOM) Add a header male pin (GND and VUSB/VBAT) to use with nRF profiler for power consumption measurements
-
-  - title: Lessons learnt
-    subtitle: Improvements for the next version
-    list:
       - name: (Case) Make the text height bigger for LEDs and ON/OFF power switch
       - name: (Case) Add more chamfers and rounded corners for a better aesthetic
       - name: (Case) <strong>Teeth and groves</strong> - Make the teeth thicker for better strength
