@@ -9,6 +9,7 @@ BatteryLevel::BatteryLevel(int enablePin, int measurementPin)
 }
 
 // FIX: This function is returning 0 all the time
+// TODO: Blink LED 10 times if the battery level is below 10%
 int BatteryLevel::readLevel() {
   digitalWrite(_enablePin, HIGH);  // Enable measurement
   delay(1);  // Allow time for measurement to stabilize
