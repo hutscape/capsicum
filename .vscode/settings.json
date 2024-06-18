@@ -20,6 +20,7 @@
     "associative_base": "cpp",
     "iterator": "cpp",
     "serstream": "cpp",
-    "__locale": "cpp"
+    "__locale": "cpp",
+    "unordered_set": "cpp"
   }
 }

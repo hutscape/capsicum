@@ -7,23 +7,48 @@
 #define BATTERY_ENABLE_PIN 6
 #define BATTERY_MEASURE_PIN 0
 
+const float R1 = 10000.0;  // 10kΩ
+const float R2 = 100000.0;  // 100kΩ
+const float Vref = 3.3;  // Reference voltage for ADC (3.3V for ESP32-C3)
+const int ADCmax = 4095;  // 12-bit ADC resolution
+
+
 void setup() {
   Serial.begin(115200);
   Serial.println();
 
   pinMode(LED, OUTPUT);
   pinMode(BATTERY_ENABLE_PIN, OUTPUT);
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
 }
 
 void loop() {
-  // FIX: BATTERY_ENABLE_PIN voltage does not change whether it is HIGH or LOW
-  pinMode(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
   digitalWrite(LED, HIGH);
-  Serial.print("MOSFET is ON");
-  delay(2000);
+  Serial.println("MOSFET is ON");
+  delay(10000);
 
-  pinMode(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
+  delayMicroseconds(10);
+  int sum = 0;
+  for (int i = 0; i < 100; i++) {
+    sum = sum + analogRead(BATTERY_MEASURE_PIN);
+  }
+
+  float adcValue = sum / 100.0;
+  Serial.print("Raw ADC Value: ");
+  Serial.println(adcValue);
+
+  float voltageAtPin = (adcValue / ADCmax) * Vref;
+  Serial.print("Voltage at Pin: ");
+  Serial.println(voltageAtPin);
+
+  float batteryVoltage = voltageAtPin * ((R1 + R2) / R2);
+  Serial.print("Battery Voltage: ");
+  Serial.println(batteryVoltage);
+
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
   digitalWrite(LED, LOW);
-  Serial.print("MOSFET is OFF");
-  delay(2000);
+  Serial.println("MOSFET is OFF");
+  Serial.println("-------------------- ");
+  delay(4000);
 }
