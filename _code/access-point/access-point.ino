@@ -16,7 +16,6 @@ void setup() {
   Serial.println("Configuring access point...");
 
   pinMode(LED, OUTPUT);
-  pinMode(BATTERY_ENABLE_PIN, HIGH);
 
   if (!WiFi.softAP(ssid, password)) {
     log_e("Soft AP creation failed.");
@@ -29,7 +28,6 @@ void setup() {
 
   Serial.println("Server started");
   Serial.print("Battery Analog level: ");
-  Serial.println(measureBatteryVoltage());
 }
 
 void loop() {
