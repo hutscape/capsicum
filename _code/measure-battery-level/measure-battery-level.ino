@@ -44,6 +44,14 @@ void loop() {
   Serial.print("Battery Voltage: ");
   Serial.println(batteryVoltage);
 
+
+  float batteryLevel = (batteryVoltage - 3.0) / (4.2 - 3.0) * 100;
+  // 3.0: Minimum voltage of the battery
+  // 4.2: Maximum voltage of the battery
+  // 100: Maximum battery level in percentage
+  Serial.print("Battery Level: ");
+  Serial.print(batteryLevel);
+
   digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
   digitalWrite(LED, LOW);
   Serial.println("MOSFET is OFF");
