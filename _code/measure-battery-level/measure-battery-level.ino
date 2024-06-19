@@ -26,7 +26,6 @@ void loop() {
   digitalWrite(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
   digitalWrite(LED, HIGH);
   Serial.println("MOSFET is ON");
-  delay(10000);
 
   delayMicroseconds(10);
   int sum = 0;
