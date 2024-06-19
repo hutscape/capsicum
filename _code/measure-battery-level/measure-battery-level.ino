@@ -10,8 +10,7 @@
 const float R1 = 10000.0;  // 10kΩ
 const float R2 = 100000.0;  // 100kΩ
 const float Vref = 3.3;  // Reference voltage for ADC (3.3V for ESP32-C3)
-const int ADCmax = 4095;  // 12-bit ADC resolution
-
+const int adcMax = 4095;  // 12-bit ADC resolution
 
 void setup() {
   Serial.begin(115200);
@@ -23,9 +22,9 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
   digitalWrite(LED, HIGH);
   Serial.println("MOSFET is ON");
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
 
   delayMicroseconds(10);
   int sum = 0;
@@ -37,7 +36,7 @@ void loop() {
   Serial.print("Raw ADC Value: ");
   Serial.println(adcValue);
 
-  float voltageAtPin = (adcValue / ADCmax) * Vref;
+  float voltageAtPin = (adcValue / adcMax) * Vref;
   Serial.print("Voltage at Pin: ");
   Serial.println(voltageAtPin);
 
