@@ -27,7 +27,6 @@ void setup() {
   server.begin();
 
   Serial.println("Server started");
-  Serial.print("Battery Analog level: ");
 }
 
 void loop() {
