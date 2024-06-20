@@ -18,7 +18,7 @@ void setup() {
   pinMode(LED, OUTPUT);
 
   if (!WiFi.softAP(ssid, password)) {
-    log_e("Soft AP creation failed.");
+    Serial.println("Soft AP creation failed.");
     while (1) {}
   }
   IPAddress myIP = WiFi.softAPIP();
@@ -29,28 +29,32 @@ void setup() {
   Serial.println("Server started");
 }
 
+void handleClient(WiFiClient client) {
+  Serial.println("New Client.");
+  String currentLine = "";
+  while (client.connected()) {
+    if (client.available()) {
+      digitalWrite(LED, HIGH);
+
+      client.println("HTTP/1.1 200 OK");
+      client.println("Content-type:text/html");
+      client.println();
+
+      client.print("Hello World!");
+
+      client.println();
+      break;
+    }
+  }
+  client.stop();
+  Serial.println("Client Disconnected.");
+  digitalWrite(LED, LOW);
+}
+
 void loop() {
   WiFiClient client = server.accept();
 
   if (client) {
-    Serial.println("New Client.");
-    String currentLine = "";
-    while (client.connected()) {
-      if (client.available()) {
-        digitalWrite(LED, HIGH);
-
-        client.println("HTTP/1.1 200 OK");
-        client.println("Content-type:text/html");
-        client.println();
-
-        client.print("Hello World!");
-
-        client.println();
-        break;
-      }
-    }
-    client.stop();
-    Serial.println("Client Disconnected.");
-    digitalWrite(LED, LOW);
+    handleClient(client);
   }
 }
