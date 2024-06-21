@@ -25,7 +25,10 @@ images:
 1. Remove the USB-C cable used for firmware upload
 1. Turn on the power switch
 1. Connect to WiFi access point `batt` with password `12345678`
+
+    ![](/images/code/access-point-wifi.png)
+
 1. Browser to `http://192.168.4.1` on the browser
 1. View `hello world`
 
-![](/images/code/access-point-webpage.png)
+    ![](/images/code/access-point-webpage.png)

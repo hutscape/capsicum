@@ -1,3 +1,9 @@
+// This code sets up an ESP32-C3 as an access point (AP) with a specified SSID and password.
+// It creates a server that listens for incoming client connections on port 80.
+// When a client connects, it sends a "Hello World!" message as the response.
+// The code also includes a LED that turns on when a client is connected and turns off when the client disconnects.
+
+// This code is based on the WiFiAccessPoint example from the Arduino ESP32 library:
 // https://raw.githubusercontent.com/espressif/arduino-esp32/990e3d5b431b63b4adc364b045a79afdad645a3f/libraries/WiFi/examples/WiFiAccessPoint/WiFiAccessPoint.ino
 
 #include <WiFi.h>
