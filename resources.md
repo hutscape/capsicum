@@ -206,4 +206,8 @@ references:
         url: https://web.archive.org/web/20230602034059/https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/index.html
       - name: Low Power battery measurement switch?
         url: https://forum.arduino.cc/t/low-power-battery-measurement-switch/1171203
+      - name: Picoclick-C3 schematic with battery monitoring circuit
+        url: https://github.com/makermoekoe/Picoclick-C3/blob/main/pcb/Picoclick_C3/picoclick_c3_v1.1.pdf
+      - name: Picoclick code for measuring battery voltage
+        url: https://github.com/makermoekoe/Picoclick-C3/blob/799116efc031ff3b38fff9c742de2cf0fd753665/code/Picoclick_C3/PC3_Sender_ESPNOW_wAck/src/main.cpp#L52
 ---
