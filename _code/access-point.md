@@ -17,18 +17,18 @@ features:
   - access
   - point
 images:
-  # prototype: access-point-prototype.jpg
+  prototype: access-point-prototype.jpg
   console: access-point-console.png
 ---
 
 1. Upload the firmware with `make`
 1. Remove the USB-C cable used for firmware upload
-1. Turn on the power switch
+1. Turn on the power switch to ensure battery is used
 1. Connect to WiFi access point `batt` with password `12345678`
 
-    ![](/images/code/access-point-wifi.png)
+    ![]({{ site.url }}/images/code/access-point-wifi.png)
 
 1. Browser to `http://192.168.4.1` on the browser
 1. View `hello world`
 
-    ![](/images/code/access-point-webpage.png)
+    ![]({{ site.url }}/images/code/access-point-webpage.png)
