@@ -8,7 +8,7 @@ const float R2 = 33000.0;  // 33kΩ
 const int adcMax = 4095;  // 12-bit ADC resolution
 
 // https://forum.arduino.cc/t/esp32-c3-adc-issue-reading-4095-at-2-8v/1127687/7
-const float Vref = 2.84;  // Reference voltage for ADC (2.8V for ESP32-C3)
+const float Vref = 2.86;  // Reference voltage for ADC (2.8V for ESP32-C3)
 
 void setup() {
   Serial.begin(115200);
