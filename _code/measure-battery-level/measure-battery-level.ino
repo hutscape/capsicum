@@ -1,16 +1,14 @@
-// The code turns ON the MOSFET for 2 seconds
-// and then turns it OFF for 2 seconds.
-// The LED is also turned ON and OFF to indicate the state of the MOSFET.
-// The serial monitor is used to print the state of the MOSFET.
-
 #define LED 3
 #define BATTERY_ENABLE_PIN 6
 #define BATTERY_MEASURE_PIN 0
 
-const float R1 = 10000.0;  // 10kΩ
-const float R2 = 100000.0;  // 100kΩ
-const float Vref = 3.3;  // Reference voltage for ADC (3.3V for ESP32-C3)
+// TODO: Amend to 100kΩ resistors in the PCB for lower current consumption
+const float R1 = 33000.0;  // 33kΩ
+const float R2 = 33000.0;  // 33kΩ
 const int adcMax = 4095;  // 12-bit ADC resolution
+
+// https://forum.arduino.cc/t/esp32-c3-adc-issue-reading-4095-at-2-8v/1127687/7
+const float Vref = 2.84;  // Reference voltage for ADC (2.8=(V for ESP32-C3)
 
 void setup() {
   Serial.begin(115200);
@@ -18,43 +16,46 @@ void setup() {
 
   pinMode(LED, OUTPUT);
   pinMode(BATTERY_ENABLE_PIN, OUTPUT);
-  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
 }
 
 void loop() {
   digitalWrite(LED, HIGH);
-  Serial.println("MOSFET is ON");
-  digitalWrite(BATTERY_ENABLE_PIN, LOW);  // Turn ON the MOSFET
 
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);
   delayMicroseconds(10);
   int sum = 0;
+
   for (int i = 0; i < 100; i++) {
     sum = sum + analogRead(BATTERY_MEASURE_PIN);
   }
-
   float adcValue = sum / 100.0;
   Serial.print("Raw ADC Value: ");
   Serial.println(adcValue);
 
   float voltageAtPin = (adcValue / adcMax) * Vref;
   Serial.print("Voltage at Pin: ");
-  Serial.println(voltageAtPin);
+  Serial.print(voltageAtPin);
+  Serial.println("V");
 
   float batteryVoltage = voltageAtPin * ((R1 + R2) / R2);
   Serial.print("Battery Voltage: ");
-  Serial.println(batteryVoltage);
+  Serial.print(batteryVoltage);
+  Serial.println("V");
 
-
-  float batteryLevel = (batteryVoltage - 3.0) / (4.2 - 3.0) * 100;
   // 3.0: Minimum voltage of the battery
   // 4.2: Maximum voltage of the battery
   // 100: Maximum battery level in percentage
+  float batteryLevel = (batteryVoltage - 3.0) / (4.2 - 3.0) * 100;
   Serial.print("Battery Level: ");
   Serial.print(batteryLevel);
+  Serial.println("%");
 
-  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Turn OFF the MOSFET
+  delay(2000);
+
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
   digitalWrite(LED, LOW);
-  Serial.println("MOSFET is OFF");
-  Serial.println("-------------------- ");
-  delay(4000);
+
+  Serial.println();
+  delay(2000);
 }
