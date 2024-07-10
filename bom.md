@@ -13,27 +13,29 @@ ibom: true
 1. Click the menu item "Bulk edit fields in all schematic".
 2. Ensure the BOM in KiCad has at least these columns:
     References - Will be renamed to Designator
-    Qty - Quantity of each type of designator
     Value - Short name that appears on the schematic
     Footprint - KiCad's associated footprint. Will be renamed to Description
     Datasheet - URL to datasheet
+    Category - Electronics, Connector and Mechanical later on for assembly parts
+    DNP - Subset of the References / Designator column or all of them
     Link - Vendor URL
     Manufacturer
     MPN - Long manufacturer's part number
     Package - short consolidated name for the footprint E.g. 0603, SMD, TH
-    Vendor - Name of the online site where the parts are bought from
-    Category - Electronics, Connector and Mechanical later on for assembly parts
     Unit Price (USD) - Renamed to Unit. Prices in float 4 decimal places without any currency symbols
-    DNP - Subset of the References / Designator column or all of them
+    Vendor - Name of the online site where the parts are bought from
+    Qty - Quantity of each type of designator
 3. Uncheck Show for the columns not required
 4. Click the button at the bottom "Export as CSV"
-5. Import the file to Google Docs and clean and arrange the columns in order
-6. Add a column for Total price (USD) by multiplying Unit price and Qty
-7. Export from Google Docs as `bill_of_materials.csv`
-8. Save the CSV file in folder _data
-9. Generate statistics for the BOM `make stats`
-10. Check /bom URL
-11. Add extra mechanical and assembly BOM items in `bill_of_materials.csv` manually
+5. Import the file to Google Spreadsheet sheet name "raw data from KiCad"
+6. Check sheets "BOM" and "Summary" are updated
+7. Shorten DNP column to the Designator E.g. JP1-JP4 to become "DNP all" in "BOM" sheet
+8. File > Download > CSV the "BOM" sheet
+9. Rename CSV to bill_of_materials.csv
+9. Transfer the file to _data
+10. Edit file _data/stats.json with data from "Stats" sheet
+11. Check /bom URL
+12. Add extra mechanical and assembly BOM items in `bill_of_materials.csv` manually
     Battery
     Antenna
     Screw, nuts, spacers

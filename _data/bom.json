@@ -4,7 +4,7 @@
   "bom-uniq": 30,
   "bom-uniq-th": 4,
   "bom-uniq-dnp": 2,
-  "bom-uniq-smt": 24,
+  "bom-uniq-smt": 27,
 
   "vendors": 2,
   "vendor-names": [
@@ -13,5 +13,5 @@
   ],
 
   "currency": "USD",
-  "bom-cost": 17.53
+  "bom-cost": 14.68
 }
