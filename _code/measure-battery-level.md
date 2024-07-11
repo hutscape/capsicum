@@ -29,8 +29,23 @@ features:
   - battery
   - voltage
 images:
-  prototype: demo-prototype.jpg
+  prototype: measure-battery-level-prototype.jpg
   console: measure-battery-level-console.png
+  schematic: measure-battery-level-schematic.png
 ---
 
-This code measure the battery voltage using the ESP32-C3 ADC. The battery voltage is measured using a voltage divider circuit. The voltage divider circuit is used to scale down the battery voltage to a level that can be measured by the ESP32-C3 ADC. The ESP32-C3 ADC has a 12-bit resolution.
+This code measures the battery voltage using the ESP32-C3 ADC with a voltage divider circuit. The voltage divider circuit is used to scale down the battery voltage to a level that can be measured by the ESP32-C3 ADC. The ESP32-C3 ADC has a 12-bit resolution.
+
+### With Oscilloscope
+
+Channel 1 is connected to the `BATTERY_ENABLE_PIN` where the MOSFET is connected. Channel 2 is connected to the `BATTERY_MEASURE_PIN` where ADC is connected. Every 2 seconds, the MOSFET is turned on and the battery voltage is measured.
+
+![]({{ site.url }}/images/code/measure-battery-level-oscilloscope-1.png)
+
+![]({{ site.url }}/images/code/measure-battery-level-oscilloscope-2.png)
+
+![]({{ site.url }}/images/code/measure-battery-level-oscilloscope-3.png)
+
+Here the oscilloscope is showing the voltage at pin is `2V` and the same is measured by the microcontroller. With the potential divider circuit, the total battery voltage multiplied by 2 and it is `4V`. In the code, we add a `10us` delay before reading the ADC value.
+
+![]({{ site.url }}/images/code/measure-battery-level-console.png)
