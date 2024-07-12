@@ -1,20 +1,43 @@
+#include "Arduino.h"
 #include "batteryLevel.h"
-#include <Arduino.h>
 
-BatteryLevel::BatteryLevel(int enablePin, int measurementPin)
-  : _enablePin(enablePin), _measurementPin(measurementPin) {
-  pinMode(_enablePin, OUTPUT);
-  pinMode(_measurementPin, INPUT);
-  digitalWrite(_enablePin, LOW);  // Assume active high enable
+BatteryLevel::BatteryLevel(int batteryMeasurePin, int batteryEnablePin)
+  : _batteryMeasurePin(batteryMeasurePin), _batteryEnablePin(batteryEnablePin) {}
+
+void BatteryLevel::init() {
+  pinMode(_batteryEnablePin, OUTPUT);
+  digitalWrite(_batteryEnablePin, HIGH);
 }
 
-// FIX: This function is returning 0 all the time
-// TODO: Blink LED 10 times if the battery level is below 10%
-int BatteryLevel::readLevel() {
-  digitalWrite(_enablePin, HIGH);  // Enable measurement
-  delay(1);  // Allow time for measurement to stabilize
-  int raw = analogRead(_measurementPin);
-  digitalWrite(_enablePin, LOW);  // Disable measurement
-  // Convert the raw reading to voltage
-  return round(raw / 1023.0 * 100);
+float BatteryLevel::calculate() {
+  float adcValue = calculateADCValue();
+  float batteryVoltage = calculateBatteryVoltage(adcValue);
+  float batteryLevel = calculateBatteryLevel(batteryVoltage);
+  return batteryLevel;
+}
+
+float BatteryLevel::calculateADCValue() {
+  digitalWrite(_batteryEnablePin, LOW);
+  delayMicroseconds(10);
+
+  int sum = 0;
+  for (int i = 0; i < 100; i++) {
+    sum += analogRead(_batteryMeasurePin);
+  }
+  float adcValue = sum / 100.0;
+
+  digitalWrite(_batteryEnablePin, HIGH);
+
+  return adcValue;
+}
+
+float BatteryLevel::calculateBatteryVoltage(float adcValue) {
+  float voltageAtPin = (adcValue / _adcMax) * _Vref;
+  float batteryVoltage = voltageAtPin * _voltageDividerRatio;
+  return batteryVoltage;
+}
+
+float BatteryLevel::calculateBatteryLevel(float batteryVoltage) {
+  float batteryLevel = (batteryVoltage - _minVoltage) / (_maxVoltage - _minVoltage) * 100.0;
+  return batteryLevel;
 }

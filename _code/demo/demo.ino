@@ -25,23 +25,25 @@ const long timeZoneOffset = 28800;
 const int startTime = 9;  // 9am or 0900h
 const int endTime = 21;  // 9pm or 2100h
 
-#define BELL_PIN 7
-#define LED 3
-#define WAKEUP_INTERRUPT_PIN 4
-#define BATTERY_ENABLE_PIN 6
-#define BATTERY_MEASUREMENT_PIN 5
+const int bellPin = 7;
+const int led = 3;
+const int wakeupInterruptPin = 4;
 
 // Connect this pin to HIGH if you want to stay awake
 // E.g. for uploading firmware
-#define SLEEP_CHECK_PIN 2
+const int sleepCheckPin = 2;
+
+const int batteryEnablePin = 6;
+const int batteryMeasurePin = 0;
 
 Bell bell;
-LEDController ledController(LED);
-SleepManager sleepManager(WAKEUP_INTERRUPT_PIN, SLEEP_CHECK_PIN);
+LEDController ledController(led);
+SleepManager sleepManager(wakeupInterruptPin, sleepCheckPin);
 WiFiConnector wifiConnector(ssid, pass);
 TimeManager timeManager(timeZoneOffset, startTime, endTime);
-BatteryLevel batteryLevel(BATTERY_ENABLE_PIN, BATTERY_MEASUREMENT_PIN);
+BatteryLevel batteryLevel(batteryMeasurePin, batteryEnablePin);
 WebhookClient webhookClient;
+int batt = 0;
 
 void setup() {
   if (DEBUG != DBG_NONE) {
@@ -58,6 +60,13 @@ void setup() {
   } else {
     initializeAndRingBell();
   }
+
+  batteryLevel.init();
+  batt = static_cast<int>(batteryLevel.calculate());
+  String debugMessage = "Battery Level: "
+    + String(batt)
+    + "%";
+  DEBUG_INFO(debugMessage.c_str());
 
   delay(bellTimeout);  // Timeout for the doorbell
 
@@ -95,7 +104,6 @@ void handleConnectedWiFi() {
 }
 
 void ringBellIfNeeded() {
-  DEBUG_DEBUG("Initializing time manager...");
   timeManager.init();
   DEBUG_DEBUG("Time manager initialized.");
 
@@ -118,13 +126,12 @@ void sendWebhookToZapier() {
 }
 
 void initializeAndRingBell() {
-  DEBUG_DEBUG("Initializing bell...");
-  bell.init(BELL_PIN);
+  bell.init(bellPin);
   DEBUG_DEBUG("Bell initialized.");
 
-  String debugMessage = "Bell should ring after the timeout of "
+  String debugMessage = "The bell will ring after a timeout of "
     + String(bellTimeout / 1000.0)
-    + "s";
+    + " seconds";
   DEBUG_DEBUG(debugMessage.c_str());
   bell.ring();
 }
@@ -141,7 +148,7 @@ WebhookClientConfig prepareWebhookConfig() {
     server,
     host,
     endpoint,
-    batteryLevel.readLevel(),
+    batt,
     environment
   };
 
