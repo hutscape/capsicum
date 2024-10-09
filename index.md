@@ -18,6 +18,7 @@ features:
   - detail: Turn off door bell audio based on time of the day E.g. sleeping
   - detail: Add a timeout so that repeated door bell rings are not annoying
   - detail: Connect to WiFi and send a webhook to Zapier for future integrations
+  - details: (Fail-safe) Works like a normal doorbell without WiFi
   - detail: (Integration) Turn on a light signal when the door bell rings and the sound is off E.g. in a Zoom call
   - detail: (Integration) Send a mobile notification
 ---
