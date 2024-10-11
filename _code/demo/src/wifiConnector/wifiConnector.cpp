@@ -11,9 +11,9 @@ void WiFiConnector::connect() {
     Serial.println("Connecting to WiFi");
   #endif
 
-  // Timeout trying to connect to the WiFi after 5 seconds
+  // Timeout trying to connect to the WiFi after 2 seconds
   unsigned long startTime = millis();
-  while (WiFi.status() != WL_CONNECTED && (millis() - startTime) < 5000) {
+  while (WiFi.status() != WL_CONNECTED && (millis() - startTime) < TIMEOUT_MS) {
     delay(500);
     #ifdef DEBUG_WIFI_CONNECTOR
       Serial.print(".");

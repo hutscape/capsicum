@@ -58,6 +58,7 @@ void setup() {
   if (wifiConnector.isConnected()) {
     handleConnectedWiFi();
   } else {
+    DEBUG_ERROR("Not connected to WiFi. Falling back to ringing the bell.");
     initializeAndRingBell();
   }
 
