@@ -70,6 +70,7 @@ void setup() {
   DEBUG_INFO(debugMessage.c_str());
 
   delay(bellTimeout);  // Timeout for the doorbell
+  blinkLEDIfBatteryLow(batt);  // Blink LED 10x if battery is below 20%
 
   #ifndef PRODUCTION
     ledController.init();
@@ -154,4 +155,12 @@ WebhookClientConfig prepareWebhookConfig() {
   };
 
   return config;
+}
+
+void blinkLEDIfBatteryLow(float batt) {
+  if (batt < 20) {
+    for (int i = 0; i < 10; i++) {
+      ledController.blink(1);
+    }
+  }
 }
