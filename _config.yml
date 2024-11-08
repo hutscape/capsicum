@@ -4,7 +4,8 @@ url: "https://hutscape.com/capsicum"
 parent: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
-youtube: https://www.youtube.com/user/@sayanee/videos
+youtube: https://youtube.com/@sayanee
+paypal: https://www.paypal.com/ncp/payment/4JU23HRF65P66
 github:
   repository_url: https://github.com/hutscape/capsicum
   raw_content_url: https://github.com/hutscape/capsicum/blob/main
