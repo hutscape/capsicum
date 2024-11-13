@@ -39,8 +39,9 @@ lessons:
   - name: (Case) <strong>Teeth and grooves</strong> - Include visual cues on the exterior for finger placement
   - name: (Case) PCB holder screw lug can be shorter
   - name: (Case) Add an LED slot to view the charge LED from the outside without opening the case
+  - name: (Case) Add <a href="https://www.pollen.am/design_for_3d_printing_edges_fillets_ribs/">filletted poles</a> for screw lugs and holders on the case base
   - name: (Power) <strong>Battery</strong> - Use flat LiPo battery for a compact design
   - name: (Layout) <strong>PCB</strong> - Add silkscreen pin labels for all connectors that extend outside the PCB E.g. pin headers or USB-C
   - name: (Layout, Case) <a href="https://www.fiveflute.com/guide/design-for-assembly-dfa-best-practices/">Mistake proof assembly</a> by designing the case and PCB to fit only one way, E.g.asymmetric screw holes, PCB shape and screw lugs
-  - name: Use Conventional Commit Messages for <a href="https://www.conventionalcommits.org/en/v1.0.0/">better git history</a> with scopes such as schematic, layout, bom, firmware, case, power.
+  - name: Use Conventional Commit Messages for <a href="https://www.conventionalcommits.org/en/v1.0.0/">better git history</a> with scopes such as firmware, case, schematic, layout, docs, bom, power, design, website, chore (CI/CD/updates).
 ---
