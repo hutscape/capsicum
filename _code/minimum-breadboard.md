@@ -1,6 +1,6 @@
 ---
 layout: code
-title: Minimum example with breadboard anddev board
+title: Minimum example with breadboard and dev board
 description: Press the push button to wake up the ESP32-C3 from deep sleep, sound the bell, and go back to sleep.
 references:
   - name: Schematic of ESP32-C3-DevKitM-1
