@@ -1,4 +1,6 @@
-#define LED LED_BUILTIN
+// #define LED 3  // for the PCB
+#define LED LED_BUILTIN  // for the breadboard with PCB
+
 #define BELL_PIN 7
 #define WAKEUP_INTERRUPT_PIN 4
 RTC_DATA_ATTR int bootCount = 0;

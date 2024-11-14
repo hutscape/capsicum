@@ -1,5 +1,11 @@
-BOARD?=esp32:esp32:esp32c3
-PORT?=/dev/cu.SLAB_USBtoUART*
+# Uncomment for PCB
+BOARD?=esp32:esp32:esp32c3:CDCOnBoot=cdc
+PORT?=/dev/cu.usbmodem1410*
+
+# Uncomment for breadboard with PCB
+# BOARD?=esp32:esp32:esp32c3
+# PORT?=/dev/cu.SLAB_USBtoUART*
+
 BUILD=build
 
 .PHONY: default lint compile flash clean
