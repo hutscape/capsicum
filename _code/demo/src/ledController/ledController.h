@@ -8,7 +8,7 @@ public:
   LEDController(int pin);
 
   void init();
-  void blink(int times);
+  void blink(int period, int times);
 
 private:
   int ledPin;

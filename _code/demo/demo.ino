@@ -79,7 +79,7 @@ void setup() {
 
 void loop() {
   #ifndef PRODUCTION
-    ledController.blink(1);
+    ledController.blink(1000, 1);
   #endif
 
   if (sleepManager.shouldGoToSleep()) {
@@ -160,7 +160,7 @@ WebhookClientConfig prepareWebhookConfig() {
 void blinkLEDIfBatteryLow(float batt) {
   if (batt < 20) {
     for (int i = 0; i < 10; i++) {
-      ledController.blink(1);
+      ledController.blink(500, 40);  // 500ms * 40 = 20 seconds
     }
   }
 }

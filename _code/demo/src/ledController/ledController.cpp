@@ -8,12 +8,12 @@ void LEDController::init() {
   digitalWrite(ledPin, LOW);
 }
 
-void LEDController::blink(int times) {
+void LEDController::blink(int period, int times) {
   for (int i = 0; i < times; i++) {
     digitalWrite(ledPin, HIGH);
-    delay(1000);
+    delay(period);
 
     digitalWrite(ledPin, LOW);
-    delay(1000);
+    delay(period);
   }
 }
