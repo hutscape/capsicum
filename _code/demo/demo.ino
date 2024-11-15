@@ -131,7 +131,7 @@ void initializeAndRingBell() {
   bell.init(bellPin);
   DEBUG_DEBUG("Bell initialized.");
 
-  String debugMessage = "The bell will ring after a timeout of "
+  String debugMessage = "The bell is muted for a timeout of "
     + String(bellTimeout / 1000.0)
     + " seconds";
   DEBUG_DEBUG(debugMessage.c_str());
@@ -142,7 +142,7 @@ WebhookClientConfig prepareWebhookConfig() {
   const char* environment = "testing";
 
   #ifdef PRODUCTION
-    const char* environment = "production";
+    environment = "production";
   #endif
 
   WebhookClientConfig config = {
