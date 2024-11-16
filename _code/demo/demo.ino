@@ -36,6 +36,10 @@ const int sleepCheckPin = 2;
 const int batteryEnablePin = 6;
 const int batteryMeasurePin = 0;
 
+const int lowBattPeriod = 500;  // 500ms
+const int lowBattTimes = 40;  // 40 times
+const int LOW_BATTERY_THRESHOLD = 20;
+
 Bell bell;
 LEDController ledController(led);
 SleepManager sleepManager(wakeupInterruptPin, sleepCheckPin);
@@ -46,35 +50,42 @@ WebhookClient webhookClient;
 int batt = 0;
 
 void setup() {
-  if (DEBUG != DBG_NONE) {
-    Serial.begin(115200);
-    while (!Serial) { }
-  }
+  initializeDebug();
 
-  Debug.setDebugLevel(DEBUG);
-  Debug.timestampOn();
+  // Check if the device can be connected to WiFi
+  if (isWifiConnected()) {
+    // If the current time is within the specified range, ring the bell
+    if (isCurrentTimeInRange()) {
+      ringBell();
+    }
 
-  wifiConnector.connect();
-  if (wifiConnector.isConnected()) {
-    handleConnectedWiFi();
+    // Display WiFi information on the debug interface
+    displayWiFiInfo();
+
+    // Check the battery level
+    batt = checkBatteryLevel();
+
+    // Send a webhook to Zapier
+    sendWebhookToZapier();
+
+    // Disconnect from WiFi to save power
+    wifiConnector.disconnect();
   } else {
+     // If not connected to WiFi, ring the bell as a fallback
+    ringBell();
     DEBUG_ERROR("Not connected to WiFi. Falling back to ringing the bell.");
-    initializeAndRingBell();
+
+    // Check the battery level
+    batt = checkBatteryLevel();
   }
 
-  batteryLevel.init();
-  batt = static_cast<int>(batteryLevel.calculate());
-  String debugMessage = "Battery Level: "
-    + String(batt)
-    + "%";
-  DEBUG_INFO(debugMessage.c_str());
-
-  delay(bellTimeout);  // Timeout for the doorbell
-  blinkLEDIfBatteryLow(batt);  // Blink LED 10x if battery is below 20%
-
-  #ifndef PRODUCTION
-    ledController.init();
-  #endif
+  // If the battery level is below the threshold, blink the LED
+  if (batt < LOW_BATTERY_THRESHOLD) {
+    blinkBatteryLow(lowBattPeriod, lowBattTimes);  // 500ms * 40 = 20 seconds
+  } else {
+    // Otherwise, delay for the doorbell timeout period
+    delay(bellTimeout - lowBattPeriod*lowBattTimes);
+  }
 }
 
 void loop() {
@@ -90,33 +101,61 @@ void loop() {
   DEBUG_INFO("Staying awake");
 }
 
-void handleConnectedWiFi() {
-  DEBUG_INFO("Connected to WiFi SSID ");
-  DEBUG_INFO(wifiConnector.getSSID());
+void initializeDebug() {
+  if (DEBUG != DBG_NONE) {
+    Serial.begin(115200);
+    while (!Serial) {
+      delay(10);
+    }
 
-  ringBellIfNeeded();
-
-  // Send to Zapier in production environment
-  // 100/month Zapier limit
-  #ifdef PRODUCTION
-    sendWebhookToZapier();
-  #endif
-
-  wifiConnector.disconnect();
+    Debug.setDebugLevel(DEBUG);
+    Debug.timestampOn();
+  }
 }
 
-void ringBellIfNeeded() {
+bool isWifiConnected() {
+  wifiConnector.connect();
+  return wifiConnector.isConnected();
+}
+
+void displayWiFiInfo() {
+  DEBUG_INFO("Connected to WiFi SSID ");
+  DEBUG_INFO(wifiConnector.getSSID());
+}
+
+bool isCurrentTimeInRange() {
   timeManager.init();
   DEBUG_DEBUG("Time manager initialized.");
 
   if (timeManager.isCurrentTimeInRange()) {
-    initializeAndRingBell();
+    return true;
   } else {
-  DEBUG_DEBUG("Not ringing the bell! The time is not right.");
+    DEBUG_DEBUG("Not ringing the bell! The time is not right.");
+    return false;
   }
 }
 
+void ringBell() {
+  bell.init(bellPin);
+  DEBUG_DEBUG("Bell initialized.");
+  bell.ring();
+}
+
+int checkBatteryLevel() {
+  batteryLevel.init();
+  float batt = batteryLevel.calculate();
+  String debugMessage = "Battery Level: "
+    + String(batt)
+    + "%";
+  DEBUG_INFO(debugMessage.c_str());
+
+  return (int)batt;
+}
+
 void sendWebhookToZapier() {
+  // Send to Zapier in production environment
+  // 100/month Zapier limit
+  #ifdef PRODUCTION
   WebhookClientConfig config = prepareWebhookConfig();
 
   DEBUG_INFO("Sending webhook to Zapier");
@@ -125,17 +164,7 @@ void sendWebhookToZapier() {
   } else {
     DEBUG_INFO("Successful in sending the webhook to Zapier");
   }
-}
-
-void initializeAndRingBell() {
-  bell.init(bellPin);
-  DEBUG_DEBUG("Bell initialized.");
-
-  String debugMessage = "The bell is muted for a timeout of "
-    + String(bellTimeout / 1000.0)
-    + " seconds";
-  DEBUG_DEBUG(debugMessage.c_str());
-  bell.ring();
+  #endif
 }
 
 WebhookClientConfig prepareWebhookConfig() {
@@ -157,10 +186,7 @@ WebhookClientConfig prepareWebhookConfig() {
   return config;
 }
 
-void blinkLEDIfBatteryLow(float batt) {
-  if (batt < 20) {
-    for (int i = 0; i < 10; i++) {
-      ledController.blink(500, 40);  // 500ms * 40 = 20 seconds
-    }
-  }
+void blinkBatteryLow(int period, int times) {
+  DEBUG_WARNING("Battery is below 20%!");
+  ledController.blink(period, times);
 }

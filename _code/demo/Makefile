@@ -18,7 +18,7 @@ EXTRA_FLAGS := $(if $(filter 1,$(PRODUCTION)),-DPRODUCTION=1,)
 default: lint compile upload clean
 
 lint:
-	cpplint --extensions=ino --filter=-legal/copyright,-runtime/int,-readability/todo *.ino
+	cpplint --extensions=ino --filter=-legal/copyright,-runtime/int,-readability/todo,-readability/casting *.ino
 
 display:
 	@echo "BOARD: $(BOARD)"

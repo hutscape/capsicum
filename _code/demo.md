@@ -29,3 +29,61 @@ This example shows how to use the ESP32-C3 dev board to do the following:
 1. Then, sound the bell if the time is fine
 1. Then, send a HTTPS POST to Zapier
 1. Then go back to sleep again until the bell is pressed
+
+```text
+
+if (button is pressed) {
+    wakeup from deep sleep
+
+    if (Wifi is connected) {
+        if (current time is appropriate) {
+          ring the bell
+        }
+
+        display Wifi SSID
+        check battery level
+
+        if (environment is production) {
+            prepare the payload
+            send a HTTPS POST to Zapier
+        }
+    } else {
+        ring the bell
+        check battery level
+    }
+
+    if (battery level is below 20%) {
+        blink the LED per second for 30 seconds
+    } else {
+        delay to mute bell for 30 seconds
+    }
+
+    go back to sleep
+}
+```
+
+And in function names:
+
+```cpp
+void setup() {
+    if (isWifiConnected()) {
+        if (isTimeAppropriate()) {
+            ringBell();
+        }
+
+        displayWifiSSID();
+        checkBatteryLevel();
+        sendWebhookToZapier();
+    } else {
+        ringBell();
+        checkBatteryLevel();
+    }
+
+    if (isBatteryLow()) {
+        blinkLowBattLED();
+    } else {
+        delayToMuteBell();
+    }
+
+    goBackToSleep();
+}
