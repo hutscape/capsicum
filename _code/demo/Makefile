@@ -23,10 +23,11 @@ lint:
 display:
 	@echo "BOARD: $(BOARD)"
 	@echo "PORT: $(PORT)"
-	@echo "EXTRA_FLAGS: $(EXTRA_FLAGS)"
+	@echo "EXTRA_FLAGS: $(if $(EXTRA_FLAGS),$(EXTRA_FLAGS),none)"
 
 compile: clean lint display
 	@if [ "$(PRODUCTION)" = "1" ]; then \
+		echo "\033[34mDisabling all serial prints and debug messages\033[0m"; \
 		echo "Compiling with extra flags..."; \
 		arduino-cli compile --fqbn $(BOARD) --output-dir $(BUILD) --build-property build.extra_flags=$(EXTRA_FLAGS) ./; \
 	else \
