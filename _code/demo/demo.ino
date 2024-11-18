@@ -18,7 +18,11 @@
 #include "Secret.h"
 
 // Timeout for the bell to ring
-const int bellTimeout = 30000;  // 30 seconds
+#ifdef PRODUCTION
+  const int bellTimeout = 30000;  // 30 seconds
+#else
+  const int bellTimeout = 5000;  // 5 seconds
+#endif
 
 // GMT+8 (8 hours * 60 minutes * 60 seconds)
 const long timeZoneOffset = 28800;
@@ -82,23 +86,20 @@ void setup() {
   // If the battery level is below the threshold, blink the LED
   if (batt < LOW_BATTERY_THRESHOLD) {
     blinkBatteryLow(lowBattPeriod, lowBattTimes);  // 500ms * 40 = 20 seconds
+    delay(bellTimeout - lowBattPeriod*lowBattTimes);
   } else {
     // Otherwise, delay for the doorbell timeout period
-    delay(bellTimeout - lowBattPeriod*lowBattTimes);
+    delay(bellTimeout);
   }
 }
 
 void loop() {
-  #ifndef PRODUCTION
-    ledController.blink(1000, 1);
-  #endif
-
   if (sleepManager.shouldGoToSleep()) {
     DEBUG_INFO("Going to sleep");
     sleepManager.sleep();
   }
 
-  DEBUG_INFO("Staying awake");
+  DEBUG_INFO("Staying awake");  // For debugging purposes
 }
 
 void initializeDebug() {
@@ -120,12 +121,12 @@ bool isWifiConnected() {
 
 void displayWiFiInfo() {
   DEBUG_INFO("Connected to WiFi SSID ");
-  DEBUG_INFO(wifiConnector.getSSID());
+  DEBUG_VERBOSE(wifiConnector.getSSID());
 }
 
 bool isCurrentTimeInRange() {
   timeManager.init();
-  DEBUG_DEBUG("Time manager initialized.");
+  DEBUG_VERBOSE("Time manager initialised.");
 
   if (timeManager.isCurrentTimeInRange()) {
     return true;
@@ -137,7 +138,7 @@ bool isCurrentTimeInRange() {
 
 void ringBell() {
   bell.init(bellPin);
-  DEBUG_DEBUG("Bell initialized.");
+  DEBUG_VERBOSE("Bell initialized.");
   bell.ring();
 }
 
@@ -153,11 +154,11 @@ int checkBatteryLevel() {
 }
 
 void sendWebhookToZapier() {
-  // Send to Zapier in production environment
-  // 100/month Zapier limit
-  #ifdef PRODUCTION
   WebhookClientConfig config = prepareWebhookConfig();
 
+  #ifdef PRODUCTION
+  // Send to Zapier in production environment
+  // 100/month Zapier limit
   DEBUG_INFO("Sending webhook to Zapier");
   if (!webhookClient.sendWebhook(&config)) {
     DEBUG_ERROR("Unsuccessful sending to Zapier");
@@ -173,6 +174,14 @@ WebhookClientConfig prepareWebhookConfig() {
   #ifdef PRODUCTION
     environment = "production";
   #endif
+
+  DEBUG_INFO("Preparing webhook configuration");
+  DEBUG_INFO("Host: ");
+  DEBUG_INFO(host);
+  DEBUG_INFO("Battery Level: ");
+  DEBUG_INFO(String(batt).c_str());
+  DEBUG_INFO("Environment: ");
+  DEBUG_INFO(environment);
 
   WebhookClientConfig config = {
     certificateAuthority,
