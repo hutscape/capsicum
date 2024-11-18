@@ -10,9 +10,7 @@ bool WebhookClient::sendWebhook(
     return false;
   } else {
     String data = "data1="
-      + String(config->batteryLevel)
-      + "&data2="
-      + String(config->environment);
+      + String(config->batteryLevel);
     String request = "POST " + String(config->endpoint) + " HTTP/1.1\r\n";
     request += "Host: " + String(config->host) + "\r\n";
     request += "Content-Type: application/x-www-form-urlencoded\r\n";

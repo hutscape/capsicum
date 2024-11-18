@@ -12,7 +12,6 @@ struct WebhookClientConfig {
   const char* host;
   const char* endpoint;
   int batteryLevel;
-  const char* environment;
 };
 
 class WebhookClient {

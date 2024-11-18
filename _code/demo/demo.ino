@@ -169,27 +169,18 @@ void sendWebhookToZapier() {
 }
 
 WebhookClientConfig prepareWebhookConfig() {
-  const char* environment = "testing";
-
-  #ifdef PRODUCTION
-    environment = "production";
-  #endif
-
   DEBUG_INFO("Preparing webhook configuration");
   DEBUG_INFO("Host: ");
   DEBUG_INFO(host);
   DEBUG_INFO("Battery Level: ");
   DEBUG_INFO(String(batt).c_str());
-  DEBUG_INFO("Environment: ");
-  DEBUG_INFO(environment);
 
   WebhookClientConfig config = {
     certificateAuthority,
     server,
     host,
     endpoint,
-    batt,
-    environment
+    batt
   };
 
   return config;
