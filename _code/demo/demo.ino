@@ -103,6 +103,7 @@ void loop() {
 }
 
 void initializeDebug() {
+  #ifndef PRODUCTION
   if (DEBUG != DBG_NONE) {
     Serial.begin(115200);
     while (!Serial) {
@@ -112,6 +113,7 @@ void initializeDebug() {
     Debug.setDebugLevel(DEBUG);
     Debug.timestampOn();
   }
+  #endif
 }
 
 bool isWifiConnected() {
