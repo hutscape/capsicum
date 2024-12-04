@@ -2,9 +2,6 @@
 #define BATTERY_ENABLE_PIN 6
 #define BATTERY_MEASURE_PIN 0
 
-// TODO: Amend to 100kΩ resistors in the PCB for lower current consumption
-const float R1 = 33000.0;  // 33kΩ
-const float R2 = 33000.0;  // 33kΩ
 const int adcMax = 4095;  // 12-bit ADC resolution
 
 // https://forum.arduino.cc/t/esp32-c3-adc-issue-reading-4095-at-2-8v/1127687/7
@@ -38,7 +35,7 @@ void loop() {
   Serial.print(voltageAtPin);
   Serial.println("V");
 
-  float batteryVoltage = voltageAtPin * ((R1 + R2) / R2);
+  float batteryVoltage = voltageAtPin * 0.5;  // 0.5 is the voltage divider ratio
   Serial.print("Battery Voltage: ");
   Serial.print(batteryVoltage);
   Serial.println("V");
