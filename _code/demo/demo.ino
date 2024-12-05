@@ -190,5 +190,6 @@ WebhookClientConfig prepareWebhookConfig() {
 
 void blinkBatteryLow(int period, int times) {
   DEBUG_WARNING("Battery is below 20%!");
+  ledController.init();
   ledController.blink(period, times);
 }
