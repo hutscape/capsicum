@@ -40,7 +40,7 @@ const int sleepCheckPin = 2;
 const int batteryEnablePin = 6;
 const int batteryMeasurePin = 0;
 
-const int lowBattPeriod = 500;  // 500ms
+const int lowBattPeriod = 250;  // 250ms
 const int lowBattTimes = 40;  // 40 times
 const int LOW_BATTERY_THRESHOLD = 20;
 
@@ -85,8 +85,10 @@ void setup() {
 
   // If the battery level is below the threshold, blink the LED
   if (batt < LOW_BATTERY_THRESHOLD) {
-    blinkBatteryLow(lowBattPeriod, lowBattTimes);  // 500ms * 40 = 20 seconds
-    delay(bellTimeout - lowBattPeriod*lowBattTimes);
+    // 250ms * 40 * 2 = 20 seconds
+    blinkBatteryLow(lowBattPeriod, lowBattTimes);
+
+    delayDifference();
   } else {
     // Otherwise, delay for the doorbell timeout period
     delay(bellTimeout);
@@ -140,8 +142,8 @@ bool isCurrentTimeInRange() {
 
 void ringBell() {
   bell.init(bellPin);
-  DEBUG_VERBOSE("Bell initialized.");
   bell.ring();
+  DEBUG_VERBOSE("Bell rang!");
 }
 
 int checkBatteryLevel() {
@@ -192,4 +194,10 @@ void blinkBatteryLow(int period, int times) {
   DEBUG_WARNING("Battery is below 20%!");
   ledController.init();
   ledController.blink(period, times);
+}
+
+// Delay the difference between the bell timeout and the low battery period
+// Ensure it is not a negative value
+void delayDifference() {
+  delay(max(0, bellTimeout - lowBattPeriod * lowBattTimes));
 }
