@@ -19,7 +19,11 @@ bool TimeManager::isCurrentTimeInRange() {
     Serial.print("Get Formatted Time: ");
     Serial.println(timeClient.getFormattedTime());
     Serial.print("Within time range? ");
-    Serial.println(currentHour >= startTime && currentHour < endTime);
+    if (currentHour >= startTime && currentHour < endTime) {
+      Serial.println("Yes");
+    } else {
+      Serial.println("No");
+    }
   #endif
 
   return currentHour >= startTime && currentHour < endTime;

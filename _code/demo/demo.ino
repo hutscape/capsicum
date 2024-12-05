@@ -130,7 +130,6 @@ void displayWiFiInfo() {
 
 bool isCurrentTimeInRange() {
   timeManager.init();
-  DEBUG_VERBOSE("Time manager initialised.");
 
   if (timeManager.isCurrentTimeInRange()) {
     return true;
