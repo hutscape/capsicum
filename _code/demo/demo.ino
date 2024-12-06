@@ -1,11 +1,16 @@
+// Change the debug level accordingly:
+// DBG_NONE, DBG_ERROR, DBG_WARNING,
+// DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
 #ifdef PRODUCTION
   #define DEBUG DBG_NONE
 #else
   #define DEBUG DBG_INFO
 #endif
-// Change the debug level accordingly:
-// DBG_NONE, DBG_ERROR, DBG_WARNING,
-// DBG_INFO (default), DBG_DEBUG, and DBG_VERBOSE
+
+// Simulatation flags
+bool simulateWifiNotConnected = false;
+bool simulateBattery = false;
+bool simulateCurrentTimeNotInRange = false;
 
 #include "Arduino_DebugUtils.h"
 #include "src/bell/bell.h"
@@ -62,7 +67,10 @@ void setup() {
   if (isWifiConnected()) {
     // If the current time is within the specified range, ring the bell
     if (isCurrentTimeInRange()) {
+      DEBUG_INFO("Ringing the bell! The time is right.");
       ringBell();
+    } else {
+      DEBUG_INFO("Not ringing the bell. The time is not right.");
     }
 
     // Display WiFi information on the debug interface
@@ -121,6 +129,10 @@ void initializeDebug() {
 }
 
 bool isWifiConnected() {
+  if (simulateWifiNotConnected) {
+    return false;
+  }
+
   wifiConnector.connect();
   return wifiConnector.isConnected();
 }
@@ -131,18 +143,22 @@ void displayWiFiInfo() {
 }
 
 bool isCurrentTimeInRange() {
+  if (simulateCurrentTimeNotInRange) {
+    DEBUG_INFO("Current time: ");
+    DEBUG_INFO("22:09:08");
+    return false;
+  }
+
   timeManager.init();
 
   DEBUG_INFO("Current time: ");
   DEBUG_INFO(timeManager.getFormattedTime().c_str());
 
   if (timeManager.isCurrentTimeInRange()) {
-    DEBUG_INFO("Ringing the bell! The time is right.");
     return true;
-  } else {
-    DEBUG_INFO("Not ringing the bell! The time is not right.");
-    return false;
   }
+
+  return false;
 }
 
 void ringBell() {
@@ -152,11 +168,14 @@ void ringBell() {
 }
 
 int checkBatteryLevel() {
+  if (simulateBattery) {
+    return 13;
+  }
+
   batteryLevel.init();
   float batt = batteryLevel.calculate();
   String debugMessage = "Battery Level: "
-    + String(batt)
-    + "%";
+    + String(batt);
   DEBUG_INFO(debugMessage.c_str());
 
   return (int)batt;
