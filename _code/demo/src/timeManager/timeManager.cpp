@@ -29,6 +29,11 @@ bool TimeManager::isCurrentTimeInRange() {
   return currentHour >= startTime && currentHour < endTime;
 }
 
+String TimeManager::getFormattedTime() {
+  timeClient.update();
+  return timeClient.getFormattedTime();
+}
+
 int TimeManager::extractHour(const String &formattedTime) {
   int hour = formattedTime.substring(0, 2).toInt(); // Extracts the hour part
   if (hour == 0 || hour == 12) {

@@ -5,7 +5,7 @@
 #include <WiFiUdp.h>
 
 // Uncomment the line below to enable debug prints
-#define DEBUG_TIME_MANAGER
+// #define DEBUG_TIME_MANAGER
 
 class TimeManager {
 private:
@@ -20,6 +20,7 @@ public:
   TimeManager(long timeZoneOffset, int startTime, int endTime);
   void init();
   bool isCurrentTimeInRange();
+  String getFormattedTime();
   int extractHour(const String &formattedTime);
 };
 

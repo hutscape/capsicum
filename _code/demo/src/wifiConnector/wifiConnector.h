@@ -4,7 +4,7 @@
 #include "WiFi.h"
 
 // Uncomment the line below to enable debug prints
-#define DEBUG_WIFI_CONNECTOR
+// #define DEBUG_WIFI_CONNECTOR
 
 // Define the timeout in milliseconds
 const unsigned long TIMEOUT_MS = 2000; // 2 seconds

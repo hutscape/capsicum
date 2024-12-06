@@ -1,7 +1,7 @@
 #ifdef PRODUCTION
   #define DEBUG DBG_NONE
 #else
-  #define DEBUG DBG_VERBOSE
+  #define DEBUG DBG_INFO
 #endif
 // Change the debug level accordingly:
 // DBG_NONE, DBG_ERROR, DBG_WARNING,
@@ -55,6 +55,8 @@ int batt = 0;
 
 void setup() {
   initializeDebug();
+  DEBUG_INFO("-----------------------------");
+  DEBUG_INFO("Woke up!");
 
   // Check if the device can be connected to WiFi
   if (isWifiConnected()) {
@@ -131,10 +133,14 @@ void displayWiFiInfo() {
 bool isCurrentTimeInRange() {
   timeManager.init();
 
+  DEBUG_INFO("Current time: ");
+  DEBUG_INFO(timeManager.getFormattedTime().c_str());
+
   if (timeManager.isCurrentTimeInRange()) {
+    DEBUG_INFO("Ringing the bell! The time is right.");
     return true;
   } else {
-    DEBUG_DEBUG("Not ringing the bell! The time is not right.");
+    DEBUG_INFO("Not ringing the bell! The time is not right.");
     return false;
   }
 }
@@ -142,7 +148,7 @@ bool isCurrentTimeInRange() {
 void ringBell() {
   bell.init(bellPin);
   bell.ring();
-  DEBUG_VERBOSE("Bell rang!");
+  DEBUG_INFO("Bell rang!");
 }
 
 int checkBatteryLevel() {
@@ -190,7 +196,7 @@ WebhookClientConfig prepareWebhookConfig() {
 }
 
 void blinkBatteryLow(int period, int times) {
-  DEBUG_WARNING("Battery is below 20%!");
+  DEBUG_WARNING("Blinking LED for low battery alert!");
   ledController.init();
   ledController.blink(period, times);
 }
