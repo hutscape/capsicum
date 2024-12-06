@@ -31,13 +31,12 @@ This example shows how to use the ESP32-C3 dev board to do the following:
 1. Then go back to sleep again until the bell is pressed
 
 ```text
-
 if (button is pressed) {
     wakeup from deep sleep
 
     if (Wifi is connected) {
         if (current time is appropriate) {
-          ring the bell
+        ring the bell
         }
 
         display Wifi SSID
@@ -87,3 +86,4 @@ void setup() {
 
     goBackToSleep();
 }
+```
