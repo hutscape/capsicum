@@ -35,7 +35,9 @@ void loop() {
   Serial.print(voltageAtPin);
   Serial.println("V");
 
-  float batteryVoltage = voltageAtPin * 0.5;  // 0.5 is the voltage divider ratio
+  // 2 is the voltage divider ratio
+  // (R1 + R2) / R2)
+  float batteryVoltage = voltageAtPin * 2;
   Serial.print("Battery Voltage: ");
   Serial.print(batteryVoltage);
   Serial.println("V");
