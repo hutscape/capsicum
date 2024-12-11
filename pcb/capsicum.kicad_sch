@@ -6,8 +6,8 @@
 
   (title_block
     (title "Capsicum")
-    (date "2024-12-09")
-    (rev "V1.0.2")
+    (date "2024-12-11")
+    (rev "V1.0.3")
     (comment 1 "Authored by: Sayanee Basu")
     (comment 2 "Project website: https://hutscape.com/capsicum")
     (comment 3 "License: CC-BY-SA 4.0 or TAPR")
