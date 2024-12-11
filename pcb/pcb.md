@@ -62,7 +62,7 @@ Schematic in KiCad:
     File > Page Settings > Issue Date
     File > Page Settings > Revision
 1. Create a schematic PDF file `schematic.pdf`
-    File > Print > Check Print sheet reference and title block > Print > Save as PDF > Title : Project name > Save in pcb/docs/schematic.pdf
+    File > Print > Check Print drawing sheet reference and title block > Print > Save as PDF > Title : Project name > Save in pcb/docs/schematic.pdf
 1. Create a schematic PNG file `schematic.png`
     Open schematic.pdf in Preview > Format: PNG > Resolution 300 > schematic.png > images/pcb/schematic.png
 
@@ -136,6 +136,7 @@ Generate Drill Files:
 1. Click "Generate Drill Files"
 1. Close the dialog
 1. Check the drill files `*.drl` in `gerbers` folder
+1. Click "Generate Map File"
 
 Generate Position file:
 1. Place > Drill / File origin
