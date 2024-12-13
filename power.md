@@ -9,7 +9,7 @@ power:
   tree: true
   components: true
   calculation: true
-  source: <code>1200mAh</code> Rechargeable 16320 battery
+  source: <code>1500mAh</code> Rechargeable 16320 battery
   battery_life: 1.12 year
   charging_duration: ??? hours
   charging_instruction: Plug in a USB-C cable to charge the battery.
@@ -92,3 +92,9 @@ o 2 64 0 4099 0.001220703125 0.00009765625 0 2 2 3
 ```
 
 With a p-channel MOSFET, when the gate voltage is `0V` or `LOW`, the battery voltage is measured. When the gate voltage is `3.3V` or `HIGH`, the battery voltage cannot be measured.
+
+### Charging setup
+
+The battery is charged with a USB-C cable. Plug in the USB-C cable to a power socket on-the-wall or a power bank.
+
+[![Charging on-site]({{ site.url }}/images/power/charging-onsite.jpeg)]({{ site.url }}/images/power/charging-onsite.jpeg)
