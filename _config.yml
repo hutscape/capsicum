@@ -32,7 +32,8 @@ exclude: [
   "*.stl",
   "*.FCBak",
   "*-backups",
-  "references"
+  "references",
+  "_code/**/*",
   ]
 include: ["_data"]
 collections:
